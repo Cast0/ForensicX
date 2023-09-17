@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 4fd0af01fb3d1ec47b091e1799d995c7
   - enabled: 1
-    path: Assets/Scenes/morgue.unity
+    path: Assets/Scenes/Morgue.unity
     guid: f444c4fd2651eeb4a8197e7a0f18e024
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
