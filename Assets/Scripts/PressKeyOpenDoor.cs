@@ -5,6 +5,7 @@ using UnityEngine;
 public class PressKeyOpenDoor : MonoBehaviour
 {
     public GameObject Instruction;
+    public GameObject Instructions;
     public GameObject AnimeObject;
     public GameObject ThisTrigger;
     public AudioSource DoorOpenSound;
