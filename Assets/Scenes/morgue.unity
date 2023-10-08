@@ -992,6 +992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Instruction: {fileID: 688977552}
+  Instructions: {fileID: 0}
   AnimeObject: {fileID: 2033503755}
   ThisTrigger: {fileID: 0}
   DoorOpenSound: {fileID: 0}
@@ -2671,6 +2672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Instruction: {fileID: 688977552}
+  Instructions: {fileID: 0}
   AnimeObject: {fileID: 967718184}
   ThisTrigger: {fileID: 0}
   DoorOpenSound: {fileID: 0}
@@ -3896,6 +3898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Instruction: {fileID: 688977552}
+  Instructions: {fileID: 0}
   AnimeObject: {fileID: 967718184}
   ThisTrigger: {fileID: 0}
   DoorOpenSound: {fileID: 0}
