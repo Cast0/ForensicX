@@ -8,6 +8,8 @@ public class SceneLoader : MonoBehaviour
     public GameObject LoaderUI;
     public Slider progressSlider;
 
+    public GameObject[] panelsToDisable; // Array of panels or UI elements to disable
+
     public void LoadScene(int index)
     {
         StartCoroutine(LoadScene_Coroutine(index));
@@ -15,10 +17,16 @@ public class SceneLoader : MonoBehaviour
 
     public IEnumerator LoadScene_Coroutine(int index)
     {
+        // Disable the specified panels or UI elements
+        foreach (var panel in panelsToDisable)
+        {
+            panel.SetActive(false);
+        }
+
         progressSlider.value = 0;
         LoaderUI.SetActive(true);
 
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(1);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(index);
         asyncOperation.allowSceneActivation = false;
         float progress = 0;
 
