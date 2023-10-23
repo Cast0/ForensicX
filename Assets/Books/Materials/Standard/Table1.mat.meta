@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a4da142e4518f7441b59f08186185b91
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198855
+  packageName: Books, Scrolls and Other Things (HDRP, URP, Standard)
+  packageVersion: 1.0
+  assetPath: Assets/Books/Materials/Standard/Table1.mat
+  uploadId: 442234

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c52201c1b2b12784aa3e341d57b94c75
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198855
+  packageName: Books, Scrolls and Other Things (HDRP, URP, Standard)
+  packageVersion: 1.0
+  assetPath: Assets/Books/Materials/Standard/Candles.mat
+  uploadId: 442234

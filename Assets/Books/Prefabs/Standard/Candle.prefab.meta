@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 24a5815a7a57ec0409eca04c5f844ff8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198855
+  packageName: Books, Scrolls and Other Things (HDRP, URP, Standard)
+  packageVersion: 1.0
+  assetPath: Assets/Books/Prefabs/Standard/Candle.prefab
+  uploadId: 442234

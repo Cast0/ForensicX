@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6f468347f1f6942438a918818700a987
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198855
+  packageName: Books, Scrolls and Other Things (HDRP, URP, Standard)
+  packageVersion: 1.0
+  assetPath: Assets/Books/Materials/HDRP/BooksOpen_Covers.mat
+  uploadId: 442234

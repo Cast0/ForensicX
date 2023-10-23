@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 07af646d49f9fa44f86ee9d4d26f1668
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198855
+  packageName: Books, Scrolls and Other Things (HDRP, URP, Standard)
+  packageVersion: 1.0
+  assetPath: Assets/Books/Prefabs/HDRP/BooksOpen/BookOpen4.prefab
+  uploadId: 442234

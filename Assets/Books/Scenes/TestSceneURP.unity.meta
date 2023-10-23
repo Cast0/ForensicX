@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0f1b23da5424b3047af0b1b63ddaca23
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198855
+  packageName: Books, Scrolls and Other Things (HDRP, URP, Standard)
+  packageVersion: 1.0
+  assetPath: Assets/Books/Scenes/TestSceneURP.unity
+  uploadId: 442234
