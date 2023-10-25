@@ -1605,8 +1605,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 23.2
+  m_fontSizeBase: 23.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1643,7 +1643,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 76.72492, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1664,16 +1664,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315389218}
-  m_LocalRotation: {x: -0.0003577803, y: 0.005048779, z: -0.07068654, w: 0.99748576}
+  m_LocalRotation: {x: -0.00052719086, y: 0.005033911, z: -0.10415691, w: 0.99454796}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.12595195, y: 0.19764236, z: 1219.8684}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1350728766}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.58, z: -11.957}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.2033472, y: -24.750168}
+  m_AnchoredPosition: {x: 1.6, y: -27.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &318617997
@@ -1764,7 +1764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: -104.49}
+  m_AnchoredPosition: {x: 0.000030518, y: -182.9}
   m_SizeDelta: {x: 627.2, y: 64.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &354482043
@@ -1943,8 +1943,7 @@ MonoBehaviour:
     and as it heals, it changes color from blue to green and then yellow.\r\n2. <b>Abrasion</b>
     - An abrasion is a superficial rub or wearing off of the skin, usually caused
     by a scrape or a brush burn. \n3. <b>Laceration</b> -  A laceration or cut refers
-    to a skin wound. Unlike an abrasion, none of the skin is missing. A cut is typically
-    thought of as a wound caused by a sharp object, like a shard of glass.                                                        
+    to a skin wound,                                                                                                                                                                                                   
     </page>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1972,8 +1971,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2041,8 +2040,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0.58, z: 0.651}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21.1, y: 4.8}
-  m_SizeDelta: {x: 336.2472, y: 401.8643}
+  m_AnchoredPosition: {x: -31.40465, y: 4.1067}
+  m_SizeDelta: {x: 501.4831, y: 617.0074}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &388960328
 PrefabInstance:
@@ -2556,7 +2555,7 @@ Transform:
   m_GameObject: {fileID: 470896441}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.444, z: -1.228}
+  m_LocalPosition: {x: 1.758, y: 1.444, z: -1.627}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4019,7 +4018,7 @@ Transform:
   m_GameObject: {fileID: 773904511}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.61, y: 1.59, z: -1.36}
+  m_LocalPosition: {x: 1.503, y: 1.59, z: -1.343}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4473,6 +4472,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2664035637449052044, guid: 319cf527a89fc5f4e9ec3a5c1c1a4b1e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8706563823441751577, guid: 319cf527a89fc5f4e9ec3a5c1c1a4b1e, type: 3}
       propertyPath: m_Name
       value: BookS8
@@ -4480,6 +4483,10 @@ PrefabInstance:
     - target: {fileID: 8706563823441751577, guid: 319cf527a89fc5f4e9ec3a5c1c1a4b1e, type: 3}
       propertyPath: m_TagString
       value: Selectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706563823441751577, guid: 319cf527a89fc5f4e9ec3a5c1c1a4b1e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9007881015138267586, guid: 319cf527a89fc5f4e9ec3a5c1c1a4b1e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6058,63 +6065,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0071919295, y: 0.004893585, z: 0.018456655}
   m_Center: {x: 8.7865537e-10, y: -0.00029405823, z: 0.0083248}
---- !u!1001 &995543225
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2194337599732783379, guid: d2dbe065eaceef04a9f2cd3b7174be49, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.7809687
-      objectReference: {fileID: 0}
-    - target: {fileID: 2194337599732783379, guid: d2dbe065eaceef04a9f2cd3b7174be49, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.2263157
-      objectReference: {fileID: 0}
-    - target: {fileID: 2194337599732783379, guid: d2dbe065eaceef04a9f2cd3b7174be49, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.5200977
-      objectReference: {fileID: 0}
-    - target: {fileID: 2194337599732783379, guid: d2dbe065eaceef04a9f2cd3b7174be49, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2194337599732783379, guid: d2dbe065eaceef04a9f2cd3b7174be49, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2194337599732783379, guid: d2dbe065eaceef04a9f2cd3b7174be49, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2194337599732783379, guid: d2dbe065eaceef04a9f2cd3b7174be49, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2194337599732783379, guid: d2dbe065eaceef04a9f2cd3b7174be49, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2194337599732783379, guid: d2dbe065eaceef04a9f2cd3b7174be49, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2194337599732783379, guid: d2dbe065eaceef04a9f2cd3b7174be49, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6713501089189664887, guid: d2dbe065eaceef04a9f2cd3b7174be49, type: 3}
-      propertyPath: m_Name
-      value: Scroll1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d2dbe065eaceef04a9f2cd3b7174be49, type: 3}
 --- !u!1001 &999539119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6595,8 +6545,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20.5164, y: 0.0962}
-  m_SizeDelta: {x: 37.12229, y: 84.2381}
+  m_AnchoredPosition: {x: -29.39319, y: 3.1019}
+  m_SizeDelta: {x: 61.68905, y: 117.0319}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1091307925
 MonoBehaviour:
@@ -7893,7 +7843,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1350728767
 MonoBehaviour:
@@ -7912,19 +7862,21 @@ MonoBehaviour:
     it heals, it changes color from blue to green and then yellow.\r\n2. <b>Abrasion</b>
     - An abrasion is a superficial rub or wearing off of the skin, usually caused
     by a scrape or a brush burn. \n3. <b>Laceration</b> -  A laceration or cut refers
-    to a skin wound. Unlike an abrasion, none of the skin is missing. A cut is typically
-    thought of as a wound caused by a sharp object, like a shard of glass.                                                                                             
-    Lacerations tend to be caused by blunt trauma.\n                                                 
-    \n<b><i>Sharp Force Injury</b>/<i>\r\n\r\n1. <b>Stab Wounds</b> - Stab wounds
-    result from any sharp object penetrating into the skin, soft tissues, and organs
-    with the injury deeper than it is wide on the surface of the skin.\r\n2. <b>Chop
-    Wounds</b> - A chop wound is a wound caused by a heavy weapon or instrument which
-    has at least one sharp cutting edge (5, 11, 13). \r\n                                                                     
-    3. <b>Incised Wounds</b> - A clean, straight cut caused by a sharp edge\n\r\n4.
-    <b>Strangulation Marks</b> \n\r\n<i>Ligature strangulation</i> - occurs when
-    the pressure applied around the neck is with a ligature only.\n\r\n<i>Manual
-    strangulation</i> - occurs when pressure is applied to the neck with hands, arms,
-    or legs  <page>"
+    to a skin wound,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+    Unlike an abrasion, none of the skin is missing. A cut is typically thought of
+    as a wound caused by a sharp object, like a shard of glass.Lacerations tend to
+    be caused by blunt trauma.\n\n\n\n\n\n\n                                                 
+    \n<b><i>Sharp Force Injury</b></i>\n\n1. <b>Stab Wounds</b> - Stab wounds result
+    from any sharp object penetrating into the skin, soft tissues, and organs with
+    the injury deeper than it is wide on the surface of the skin.\n2. <b>Chop Wounds</b>
+    - A chop wound is a wound caused by a heavy weapon or instrument which has at
+    least                                                                                                                                                                                                                                                              
+    one sharp cutting edge (5, 11, 13).                                                                                                                                                                                                                                                    
+    \r\n\n3. <b>Incised Wounds</b> - A clean, straight cut caused by a sharp edge\n\r\n4.
+    <b>Strangulation Marks</b> \n<i>Ligature strangulation</i> - occurs when the
+    pressure applied around the neck is with a ligature only.<page>\n                                                                                                                                                                                   
+    <i>Manual strangulation</i> - occurs when pressure is applied to the neck with
+    hands, arms, or legs  <page>"
   leftSide: {fileID: 383673652}
   rightSide: {fileID: 1780734315}
   leftPagination: {fileID: 1640761783}
@@ -9230,8 +9182,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9290,7 +9242,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527886511}
   m_LocalRotation: {x: -0.00002873225, y: -0.005061359, z: -0.0056766164, w: 0.99997115}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.47385415, y: 1.1115106, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9298,7 +9250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.8830824, y: -204.64832}
+  m_AnchoredPosition: {x: 2, y: -317}
   m_SizeDelta: {x: 20.19704, y: 2.0924}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1528982469 stripped
@@ -9741,8 +9693,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9801,7 +9753,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640761782}
   m_LocalRotation: {x: -0.00002873222, y: -0.005061359, z: -0.0056766164, w: 0.99997115}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0000141069995}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.47385415, y: 1.1115106, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9809,7 +9761,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.831139, y: -207.17767}
+  m_AnchoredPosition: {x: 5, y: -292}
   m_SizeDelta: {x: 20.19704, y: 2.0924}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1641003553
@@ -10791,14 +10743,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<page=2>                                     Lacerations tend to be caused
-    by blunt trauma.\n                                                  \n<b><i>Sharp
-    Force Injury</b>/<i>\r\n\r\n1. <b>Stab Wounds</b> - Stab wounds result from any
-    sharp object penetrating into the skin, soft tissues, and organs with the injury
-    deeper than it is wide on the surface of the skin.\r\n2. <b>Chop Wounds</b> -
-    A chop wound is a wound caused by a heavy weapon or instrument which has at least
-    one sharp cutting edge (5, 11, 13). \r\n                                                                     
-    3. <b>Incised Wounds</b> - A c</page>"
+  m_text: "<page=2>                                                                                                                                                                                                                                                                                                                                                                                            
+    Unlike an abrasion, none of the skin is missing. A cut is typically thought of
+    as a wound caused by a sharp object, like a shard of glass.Lacerations tend to
+    be caused by blunt trauma.\n\n\n\n\n\n\n                            </page>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10825,8 +10773,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10863,7 +10811,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 2
-  m_margin: {x: 24.71257, y: 11.95137, z: 4.0587463, w: -8.454605}
+  m_margin: {x: 24.71257, y: 33.5103, z: 4.0587463, w: -8.454605}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10894,8 +10842,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0.58, z: 0.651}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.7, y: 4.3}
-  m_SizeDelta: {x: 336.2472, y: 401.8643}
+  m_AnchoredPosition: {x: 30.05668, y: 8.4802}
+  m_SizeDelta: {x: 508.2478, y: 641.8077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1816248010
 GameObject:
@@ -11424,155 +11372,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 458662, guid: facf14ae9ce68b7479827bcf72fba835, type: 3}
   m_PrefabInstance: {fileID: 388960328}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1853224587
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1853224593}
-  - component: {fileID: 1853224592}
-  - component: {fileID: 1853224591}
-  - component: {fileID: 1853224590}
-  - component: {fileID: 1853224589}
-  - component: {fileID: 1853224594}
-  m_Layer: 0
-  m_Name: Plane (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1853224589
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853224587}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 18.955194, y: 0, z: 18.466333}
-  m_Center: {x: -2.851171, y: 0, z: -0.16604044}
---- !u!64 &1853224590
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853224587}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1853224591
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853224587}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: d2b1a0950d8d7cc469059a51cc5fe134, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1853224592
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853224587}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1853224593
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853224587}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.21602385, z: -0, w: 0.9763881}
-  m_LocalPosition: {x: 3.2684, y: 1.216, z: 1.814}
-  m_LocalScale: {x: 0.03125309, y: 0.033372566, z: 0.025763756}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -24.951, z: 0}
---- !u!114 &1853224594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853224587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09f50828081f8a245915a6c1dea7b128, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bookImage: {fileID: 1350728768}
-  left: {fileID: 383673651}
-  right: {fileID: 1780734314}
-  pickUpSound: {fileID: 773904512}
-  MessagePanel: {fileID: 315389218}
-  Action: 0
 --- !u!1001 &1857846158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13214,8 +13013,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21.50502, y: 1.1775}
-  m_SizeDelta: {x: 109.487, y: 100}
+  m_AnchoredPosition: {x: 31.48328, y: 2.6898}
+  m_SizeDelta: {x: 153.7541, y: 143.7994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2059454527
 MonoBehaviour:
@@ -13810,7 +13609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.907
+      value: -20.67
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13818,7 +13617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25.428
+      value: -25.75
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14032,7 +13831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.907
+      value: -20.67
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14040,7 +13839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25.428
+      value: -25.75
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14130,10 +13929,8 @@ SceneRoots:
   - {fileID: 1510687470}
   - {fileID: 1479101280}
   - {fileID: 751291540}
-  - {fileID: 1853224593}
   - {fileID: 298661935}
   - {fileID: 773904513}
   - {fileID: 470896443}
   - {fileID: 853599991}
-  - {fileID: 995543225}
   - {fileID: 1913211656}
