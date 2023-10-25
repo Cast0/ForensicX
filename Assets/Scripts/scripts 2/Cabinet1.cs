@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cabinet : Interactable
+public class Cabinet1 : Interactable
 {
     [SerializeField]
     private GameObject cabinetdoor;
@@ -10,18 +10,18 @@ public class Cabinet : Interactable
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    protected override void Interact() 
+    protected override void Interact()
     {
         cabinetdooropen = !cabinetdooropen;
-        cabinetdoor.GetComponent<Animator>().SetBool("cabinetopen",cabinetdooropen);
+        cabinetdoor.GetComponent<Animator>().SetBool("cabinet1open", cabinetdooropen);
     }
 }
