@@ -54,10 +54,8 @@ public class pickanddropscripttest : MonoBehaviour
         foreach (var c in itemcurrentlyholding.GetComponentsInChildren<Collider>()) if (c != null) c.enabled = true;
         foreach (var r in itemcurrentlyholding.GetComponentsInChildren<Rigidbody>()) if (r != null) r.isKinematic = false;
         isholding = false;
-        RaycastHit hitDown;
-        Physics.Raycast(transform.position, -Vector3.up, out hitDown);
 
-        itemcurrentlyholding.transform.position = hitDown.point + new Vector3(transform.forward.x, 0, transform.forward.z);
+        itemcurrentlyholding.transform.eulerAngles = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         itemcurrentlyholding = null;
 
     }
