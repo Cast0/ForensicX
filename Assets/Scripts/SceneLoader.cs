@@ -9,6 +9,7 @@ public class SceneLoader : MonoBehaviour
     public Slider progressSlider;
     
     
+    
 
     public void LoadScene(int index)
     {
@@ -19,6 +20,7 @@ public class SceneLoader : MonoBehaviour
     {
         progressSlider.value = 0;
         LoaderUI.SetActive(true);
+        
         
         
 
