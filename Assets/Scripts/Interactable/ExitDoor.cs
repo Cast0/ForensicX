@@ -23,7 +23,6 @@ public class ExitDoor : Interactable
     protected override void Interact()
     {
         dooropen = !dooropen;
-        //door.GetComponent<Animator>().SetBool("exitdooropen", dooropen);
         StartCoroutine(Loadlevel());
 
     }
@@ -32,6 +31,7 @@ public class ExitDoor : Interactable
     {
         door.GetComponent<Animator>().SetTrigger("exit");
         yield return new WaitForSeconds(1);
+        // type the name of the scene that you want to load
         SceneManager.LoadScene("Main Menu");
         door.GetComponent<Animator>().SetTrigger("enter");
 

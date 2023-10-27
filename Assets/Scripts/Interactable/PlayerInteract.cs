@@ -23,7 +23,7 @@ public class PlayerInteract : MonoBehaviour
         PlayerUI.UpdateDescriptionText(string.Empty);
         PlayerUI.Descriptionhide();
         RaycastHit hit;
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2, InteractableLayerMask))
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 3, InteractableLayerMask))
         {
             if (hit.collider.GetComponent<Interactable>() != null)
             {

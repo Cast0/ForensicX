@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class pickanddropscripttest : MonoBehaviour
 {
-
     public GameObject camera;
     float maxpickupdistance = 3;
     GameObject itemcurrentlyholding;
     bool isholding = false;
 
+    void Start()
+    { 
 
+    }
 
     public void Update()
     {
@@ -32,18 +34,19 @@ public class pickanddropscripttest : MonoBehaviour
             if (hit.transform.tag == "Pickable")
             {
 
-                if (isholding) Drop();
+                    if (isholding) Drop();
+                    {
+                        itemcurrentlyholding = hit.transform.gameObject;
 
-                itemcurrentlyholding = hit.transform.gameObject;
+                        foreach (var c in hit.transform.GetComponentsInChildren<Collider>()) if (c != null) c.enabled = false;
+                        foreach (var r in hit.transform.GetComponentsInChildren<Rigidbody>()) if (r != null) r.isKinematic = true;
 
-                foreach (var c in hit.transform.GetComponentsInChildren<Collider>()) if (c != null) c.enabled = false;
-                foreach (var r in hit.transform.GetComponentsInChildren<Rigidbody>()) if (r != null) r.isKinematic = true;
+                        itemcurrentlyholding.transform.parent = transform;
+                        itemcurrentlyholding.transform.localPosition = Vector3.zero;
+                        itemcurrentlyholding.transform.localEulerAngles = Vector3.zero;
 
-                itemcurrentlyholding.transform.parent = transform;
-                itemcurrentlyholding.transform.localPosition = Vector3.zero;
-                itemcurrentlyholding.transform.localEulerAngles = Vector3.zero;
-
-                isholding = true;
+                    isholding = true;
+                    }
             }
         }
     }
