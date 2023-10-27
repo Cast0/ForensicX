@@ -9,6 +9,7 @@ TagManager:
   - UI
   - Selectable
   - Pickable
+  - door
   layers:
   - Default
   - TransparentFX

@@ -2,15 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 public class ExitDoor : Interactable
 {
     [SerializeField]
     private GameObject door;
-    private bool cabinetdooropen;
-    [SerializeField]
-    private string sceneName;
+    private bool dooropen;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,10 +22,18 @@ public class ExitDoor : Interactable
 
     protected override void Interact()
     {
-        cabinetdooropen = !cabinetdooropen;
-        door.GetComponent<Animator>().SetBool("doorisopen", cabinetdooropen);
-        SceneManager.LoadScene(sceneName);
-        
+        dooropen = !dooropen;
+        //door.GetComponent<Animator>().SetBool("exitdooropen", dooropen);
+        StartCoroutine(Loadlevel());
+
     }
 
+    IEnumerator Loadlevel()
+    {
+        door.GetComponent<Animator>().SetTrigger("exit");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Main Menu");
+        door.GetComponent<Animator>().SetTrigger("enter");
+
+    }
 }
