@@ -11868,7 +11868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useEvents: 0
   PromptMessage: '[E] to Exit'
-  Descriptiontext: this will get you back at the main menu
+  Descriptiontext: this will get you back to the main menu
   door: {fileID: 1913187071}
 --- !u!1 &1913211655
 GameObject:
