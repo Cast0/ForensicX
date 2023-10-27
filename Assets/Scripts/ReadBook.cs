@@ -10,6 +10,8 @@ public class ReadBook : MonoBehaviour
     public GameObject left;
     public GameObject right;
     public AudioSource pickUpSound;
+    public GameObject _BGImage;
+    public GameObject ItemDescription;
 
     public GameObject MessagePanel;
     public bool Action = false;
@@ -20,6 +22,8 @@ public class ReadBook : MonoBehaviour
         MessagePanel.SetActive(false);
         left.SetActive(false);
         right.SetActive(false);
+        _BGImage.SetActive(false);
+        ItemDescription.SetActive(false);
 
     }
 
@@ -35,6 +39,8 @@ public class ReadBook : MonoBehaviour
                 _bookImage.enabled = true;
                 left.SetActive(true);
                 right.SetActive(true);
+                _BGImage.SetActive(false);
+                ItemDescription.SetActive(false);
             }
         }
     }
@@ -45,6 +51,8 @@ public class ReadBook : MonoBehaviour
         {
             MessagePanel.SetActive(true);
             Action = true;
+            _BGImage.SetActive(true);
+            ItemDescription.SetActive(true);
 
         }
     }
@@ -57,6 +65,8 @@ public class ReadBook : MonoBehaviour
             Action = false;
             left.SetActive(false);
             right.SetActive(false);
+            _BGImage.SetActive(false);
+            ItemDescription.SetActive(false);
 
             _bookImage.enabled = false;
         }

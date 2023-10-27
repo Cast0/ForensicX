@@ -108,11 +108,11 @@ public class BookContents : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad4)) // Numpad 4 for previous page
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) // Numpad 4 for previous page
         {
             PreviousPage();
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad6)) // Numpad 6 for next page
+        else if (Input.GetKeyDown(KeyCode.RightArrow)) // Numpad 6 for next page
         {
             NextPage();
         }
