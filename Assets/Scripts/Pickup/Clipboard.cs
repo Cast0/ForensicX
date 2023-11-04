@@ -19,6 +19,6 @@ public class Clipboard : Interactable
 
     protected override void Interact()
     {
-
+       
     }
 }

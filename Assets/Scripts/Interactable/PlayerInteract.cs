@@ -1,4 +1,5 @@
 using StarterAssets;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Input;
@@ -7,35 +8,66 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
+    [SerializeField] pickanddropscripttest pickAndDrop;
+    [SerializeField] Player_HandStatus player_HandStatus;
     public LayerMask InteractableLayerMask = 6;
     private PlayerUI PlayerUI;
+    Interactable interactable = null;
+    GameObject picked1;
 
     // Start is called before the first frame update
     void Start()
     {
+        InputManager.instance.playerInteract += OnInteract; // used event to only detect player input in one update method. Avoid using Update method as much as possible 
+
         PlayerUI = GetComponent<PlayerUI>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    private void OnInteract()
     {
-        PlayerUI.UpdateText(string.Empty);
-        PlayerUI.UpdateDescriptionText(string.Empty);
-        PlayerUI.Descriptionhide();
-        RaycastHit hit;
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 3, InteractableLayerMask))
+        if (interactable != null)
         {
-            if (hit.collider.GetComponent<Interactable>() != null)
+
+            GameObject picked = interactable.gameObject;
+            Debug.Log(picked.name);
+
+            interactable.BaseInteract();
+
+            if (picked.tag == "Pickable")
             {
-                Interactable Interactable = hit.collider.GetComponent<Interactable>();
-                PlayerUI.UpdateText(Interactable.PromptMessage);
-                PlayerUI.UpdateDescriptionText(Interactable.Descriptiontext);
-                PlayerUI.Descriptionshow();
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    Interactable.BaseInteract();
-                }
+                pickAndDrop.Pickup(picked);
+                player_HandStatus.triggerClipboard(picked);
             }
+
+
+
+
+        }
+    }
+
+    void FixedUpdate() // changed to fixd update for optimized physics
+    {
+
+
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, 3, InteractableLayerMask))
+        {
+            interactable = hit.collider.GetComponent<Interactable>();
+            // picked1 = interactable.gameObject;
+            PlayerUI.UpdateText(interactable.PromptMessage);
+            PlayerUI.UpdateDescriptionText(interactable.Descriptiontext);
+            PlayerUI.Descriptionshow();
+
+
+
+        }
+        else
+        {
+            interactable = null;
+            PlayerUI.UpdateText(string.Empty);
+            PlayerUI.UpdateDescriptionText(string.Empty);
+            PlayerUI.Descriptionhide();
         }
     }
 }

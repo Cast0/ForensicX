@@ -21,6 +21,7 @@ public class Cabinet : Interactable
 
     protected override void Interact() 
     {
+     
         cabinetdooropen = !cabinetdooropen;
         cabinetdoor.GetComponent<Animator>().SetBool("cabinetopen",cabinetdooropen);
     }

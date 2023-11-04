@@ -19,6 +19,6 @@ public class jar : Interactable
 
     protected override void Interact()
     {
-
+       
     }
 }

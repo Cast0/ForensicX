@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,12 +12,17 @@ public abstract class Interactable : MonoBehaviour
     public string PromptMessage;
     public string Descriptiontext;
     // Start is called before the first frame update
+    // public PlayerInteract playerInteract1;
 
     public void BaseInteract()
     {
-        if (useEvents)
-            GetComponent<InteractionEvents>().onInteract.Invoke();
+
+        // if (useEvents)
+        //     GetComponent<InteractionEvents>().onInteract.Invoke();
         Interact();
+
+
+
     }
     protected virtual void Interact()
     {
