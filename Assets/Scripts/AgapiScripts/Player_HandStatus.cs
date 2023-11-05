@@ -1,19 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class Player_HandStatus : MonoBehaviour
+public static class Player_HandStatus
 {
-    bool clipBoardIOnHand = false;
+    public static bool clipBoardIOnHand = false;
 
-    private void Start()
-    {
 
-    }
-
-    public void triggerClipboard(GameObject tr)
+    public static void triggerClipboard(GameObject tr)
     {
         clipBoardIOnHand = tr.TryGetComponent<Clipboard>(out _);
+
     }
 }

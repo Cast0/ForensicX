@@ -12,12 +12,13 @@ public class pickanddropscripttest : MonoBehaviour
 
     void Start()
     {
-        InputManager.instance.dropItem += DropItem;
+        InputManager.instance.G_Input += DropItem;
     }
 
     private void DropItem()
     {
         Drop(itemcurrentlyholding);
+        Player_HandStatus.triggerClipboard(gameObject); // use non clipboard game object to trigger false on clipboardonhand
     }
 
     // public void Update()
@@ -73,20 +74,25 @@ public class pickanddropscripttest : MonoBehaviour
     public void Pickup(GameObject pickedUp) // assuming that this class is attached tot he gameobject of where the item is to be placed
     {
 
+
         pickedUp.TryGetComponent<Collider>(out Collider component);
         component.enabled = false;
 
-        pickedUp.TryGetComponent<Rigidbody>(out Rigidbody rigidbody);
-        rigidbody.isKinematic = true;
-        rigidbody.velocity = Vector3.zero;
+        try
+        {
+            pickedUp.TryGetComponent<Rigidbody>(out Rigidbody rigidbody);
+            rigidbody.isKinematic = true;
+        }
+        catch
+        {
+            Debug.LogWarning("Kinematics error");
+        }
+
 
 
         if (isholding) Drop(itemcurrentlyholding);
 
         itemcurrentlyholding = pickedUp.gameObject;
-
-
-
         pickedUp.transform.parent = transform;
         pickedUp.transform.localPosition = Vector3.zero;
         pickedUp.transform.localRotation = Quaternion.identity;
@@ -101,12 +107,18 @@ public class pickanddropscripttest : MonoBehaviour
 
         dropping.TryGetComponent<Collider>(out Collider component);
         component.enabled = true;
-
-        dropping.TryGetComponent<Rigidbody>(out Rigidbody rigidbody);
-        rigidbody.isKinematic = false;
+        try
+        {
+            dropping.TryGetComponent<Rigidbody>(out Rigidbody rigidbody);
+            rigidbody.isKinematic = false;
+        }
+        catch
+        {
+            Debug.LogWarning("Kinematics error");
+        }
 
         isholding = false;
-
+        itemcurrentlyholding = null;
         dropping.transform.parent = null;
 
 

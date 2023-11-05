@@ -8,7 +8,8 @@ public class InputManager : MonoBehaviour
     public static InputManager instance;
     public Action playerInteract;
     public Action openItem;
-    public Action dropItem;
+    public Action G_Input;
+    public Action F_action;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -24,7 +25,8 @@ public class InputManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E)) playerInteract?.Invoke(); // trigger the player iteraction call
         if (Input.GetKeyDown(KeyCode.Space)) openItem?.Invoke();
-        if (Input.GetKeyDown(KeyCode.G)) dropItem?.Invoke();
+        if (Input.GetKeyDown(KeyCode.G)) G_Input?.Invoke();
+        if (Input.GetKeyDown(KeyCode.F)) F_action?.Invoke();
 
 
     }

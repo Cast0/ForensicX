@@ -9,7 +9,7 @@ using UnityEngine;
 public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] pickanddropscripttest pickAndDrop;
-    [SerializeField] Player_HandStatus player_HandStatus;
+    // [SerializeField] Player_HandStatus player_HandStatus;
     public LayerMask InteractableLayerMask = 6;
     private PlayerUI PlayerUI;
     Interactable interactable = null;
@@ -19,32 +19,35 @@ public class PlayerInteract : MonoBehaviour
     void Start()
     {
         InputManager.instance.playerInteract += OnInteract; // used event to only detect player input in one update method. Avoid using Update method as much as possible 
-
+        InputManager.instance.G_Input += OnItemDrop;
         PlayerUI = GetComponent<PlayerUI>();
     }
 
+    private void OnItemDrop()
+    {
 
+    }
 
     private void OnInteract()
     {
-        if (interactable != null)
+        if (interactable == null) return;
+
+
+        GameObject picked = interactable.gameObject;
+        Debug.Log(picked.name);
+
+        if (picked.tag == "Pickable")
         {
+            pickAndDrop.Pickup(picked);
 
-            GameObject picked = interactable.gameObject;
-            Debug.Log(picked.name);
-
-            interactable.BaseInteract();
-
-            if (picked.tag == "Pickable")
-            {
-                pickAndDrop.Pickup(picked);
-                player_HandStatus.triggerClipboard(picked);
-            }
-
-
-
-
+            Player_HandStatus.triggerClipboard(picked);
         }
+
+
+        
+        interactable.BaseInteract();
+
+
     }
 
     void FixedUpdate() // changed to fixd update for optimized physics
@@ -58,8 +61,6 @@ public class PlayerInteract : MonoBehaviour
             PlayerUI.UpdateText(interactable.PromptMessage);
             PlayerUI.UpdateDescriptionText(interactable.Descriptiontext);
             PlayerUI.Descriptionshow();
-
-
 
         }
         else
