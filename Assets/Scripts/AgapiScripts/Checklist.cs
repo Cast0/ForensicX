@@ -2,19 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using DanielLochner.Assets.SimpleScrollSnap;
 using UnityEngine;
-
-public class Checklist : MonoBehaviour
+[CreateAssetMenu(fileName = "New Checklist", menuName = "Create Checklist")]
+public class Checklist : ScriptableObject
 {
-    // Start is called before the first frame update
-    [SerializeField] SimpleScrollSnap simpleScrollSnap;
-    void Start()
-    {
-        
-    }
+    public string checklistTitle;
+    public List<string> checklistItem;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

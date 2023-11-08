@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class pickanddropscripttest : MonoBehaviour
 {
+    [SerializeField] Transform objectOnHand;
     public GameObject camera;
     float maxpickupdistance = 3;
     GameObject itemcurrentlyholding = null;
@@ -15,7 +16,7 @@ public class pickanddropscripttest : MonoBehaviour
         InputManager.instance.G_Input += DropItem;
     }
 
-    private void DropItem()
+    public void DropItem()
     {
         Drop(itemcurrentlyholding);
         Player_HandStatus.triggerClipboard(gameObject); // use non clipboard game object to trigger false on clipboardonhand
@@ -33,7 +34,7 @@ public class pickanddropscripttest : MonoBehaviour
     //     }
     // }
 
-    public void Pickup()
+    private void Pickup()
     {
         RaycastHit hit;
         if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, maxpickupdistance))
@@ -58,7 +59,7 @@ public class pickanddropscripttest : MonoBehaviour
         }
     }
 
-    public void Drop()
+    private void Drop()
     {
         itemcurrentlyholding.transform.parent = null;
         foreach (var c in itemcurrentlyholding.GetComponentsInChildren<Collider>()) if (c != null) c.enabled = true;
@@ -93,7 +94,7 @@ public class pickanddropscripttest : MonoBehaviour
         if (isholding) Drop(itemcurrentlyholding);
 
         itemcurrentlyholding = pickedUp.gameObject;
-        pickedUp.transform.parent = transform;
+        pickedUp.transform.parent = objectOnHand;
         pickedUp.transform.localPosition = Vector3.zero;
         pickedUp.transform.localRotation = Quaternion.identity;
 
@@ -102,24 +103,28 @@ public class pickanddropscripttest : MonoBehaviour
 
 
     }
-    public void Drop(GameObject dropping)
+    private void Drop(GameObject dropping)
     {
+        if (dropping != null)
+        {
+            dropping.TryGetComponent<Collider>(out Collider component);
+            component.enabled = true;
+            dropping.transform.parent = null;
+            try
+            {
+                dropping.TryGetComponent<Rigidbody>(out Rigidbody rigidbody);
+                rigidbody.isKinematic = false;
+            }
+            catch
+            {
+                Debug.LogWarning("Kinematics error");
+            }
+        }
 
-        dropping.TryGetComponent<Collider>(out Collider component);
-        component.enabled = true;
-        try
-        {
-            dropping.TryGetComponent<Rigidbody>(out Rigidbody rigidbody);
-            rigidbody.isKinematic = false;
-        }
-        catch
-        {
-            Debug.LogWarning("Kinematics error");
-        }
 
         isholding = false;
         itemcurrentlyholding = null;
-        dropping.transform.parent = null;
+
 
 
     }

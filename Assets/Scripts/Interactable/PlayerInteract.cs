@@ -1,9 +1,3 @@
-using StarterAssets;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Windows.Input;
-using UnityEditor.Search;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
@@ -25,7 +19,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnItemDrop()
     {
-
+        
     }
 
     private void OnInteract()

@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ExitDoor : Interactable
 {
-    [SerializeField]
+
+
     private GameObject door;
     private bool dooropen;
     // Start is called before the first frame update
@@ -13,7 +14,8 @@ public class ExitDoor : Interactable
     protected override void Interact()
     {
         dooropen = !dooropen;
-        StartCoroutine(Loadlevel());
+        InteractionEvents.instance?.exitDoor?.Invoke();
+        // StartCoroutine(Loadlevel());
 
     }
 

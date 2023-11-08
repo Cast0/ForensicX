@@ -14,7 +14,40 @@ public class Clipboard : Interactable
     void Start()
     {
         InputManager.instance.F_action += OnFPressed;
-        clipboardPanel.SetActive(false);
+        InputManager.instance.G_Input += DisableChecklist;
+        SetChecklistDisplay(false);
+
+    }
+    private void SetChecklistDisplay(bool value)
+    {
+        clipboardPanel.SetActive(value);
+        displayed = value;
+        InteractionEvents.instance.checklistDisplayed?.Invoke(value);
+        Cursor.visible = value;
+        if (value) Cursor.lockState = CursorLockMode.None;
+        else Cursor.lockState = CursorLockMode.Locked;
+
+
+    }
+    public void DeadBodyInteracted()
+    {
+        if (displayed)
+        {
+
+            SetChecklistDisplay(false);
+        }
+    }
+    private void DisableChecklist()
+    {
+        // Debug.Log("Drop Item");
+
+        if (displayed)
+        {
+
+            SetChecklistDisplay(false);
+
+
+        }
     }
 
     private async void OnFPressed()
@@ -23,21 +56,19 @@ public class Clipboard : Interactable
         if (!Player_HandStatus.clipBoardIOnHand) return;
         if (!displayed)
         {
-            clipboardPanel.SetActive(true);
+
             await LerpToTargetAsync(checklistPosition, checklistRotation);
-            displayed = true;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+
+            SetChecklistDisplay(true);
+
             return;
 
         }
         if (displayed)
         {
-            clipboardPanel.SetActive(false);
+            SetChecklistDisplay(false);
             await LerpToTargetAsync(positionOffset, rotationOffset);
-            displayed = false;
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+
             return;
         }
         // transform.localPosition = checklistPosition;
