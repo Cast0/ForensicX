@@ -14,6 +14,15 @@ public class pickanddropscripttest : MonoBehaviour
     void Start()
     {
         InputManager.instance.G_Input += DropItem;
+        InteractionEvents.instance.DeadBodyInteracted += DropItem;
+        InteractionEvents.instance.LaptopInteracted += DropItem;
+        InteractionEvents.instance.exitDoor += DropItem;
+    }
+
+    private void DropItem(bool obj)
+    {
+        Drop(itemcurrentlyholding);
+        Player_HandStatus.triggerClipboard(gameObject);
     }
 
     public void DropItem()

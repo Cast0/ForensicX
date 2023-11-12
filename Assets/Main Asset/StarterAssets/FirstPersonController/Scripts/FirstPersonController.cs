@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -94,12 +95,18 @@ namespace StarterAssets
 				_mainCamera = Camera.main.gameObject;
 			}
 		}
-	
+
 		private void Start()
 		{
+			InteractionEvents.instance.LaptopInteracted += OnInteracted;
+			InteractionEvents.instance.DeadBodyInteracted += OnInteracted;
+			InteractionEvents.instance.exitDoor += ()=> _controller.enabled = false;
 
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
+
+
+
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM
@@ -111,6 +118,18 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
+		}
+
+		private void OnInteracted(bool obj)
+		{
+			if (obj)
+			{
+				_controller.enabled = false;
+			}
+			else
+			{
+				_controller.enabled = true;
+			}
 		}
 
 		private void Update()
@@ -198,7 +217,7 @@ namespace StarterAssets
 			}
 
 			// move the player
-			if(_controller.enabled)_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+			if (_controller.enabled) _controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 		}
 
 		private void JumpAndGravity()

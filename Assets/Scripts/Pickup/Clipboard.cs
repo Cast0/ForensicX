@@ -20,6 +20,7 @@ public class Clipboard : Interactable
     }
     private void SetChecklistDisplay(bool value)
     {
+        if (clipboardPanel.activeSelf == value) return;
         clipboardPanel.SetActive(value);
         displayed = value;
         InteractionEvents.instance.checklistDisplayed?.Invoke(value);

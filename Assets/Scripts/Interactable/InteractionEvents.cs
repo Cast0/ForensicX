@@ -4,11 +4,13 @@ using System;
 
 public class InteractionEvents : MonoBehaviour
 {
-    public UnityEvent onInteract;
+    // public UnityEvent onInteract;
     public Action<bool> checklistDisplayed;
-    public UnityEvent DeadBodyInteracted;
-    public UnityEvent DeadBodyLeft;
-    public UnityEvent exitDoor;
+    public Action<bool> LaptopInteracted;
+    public Action<bool> DeadBodyInteracted;
+    // public UnityEvent DeadBodyInteracted;
+    // public UnityEvent DeadBodyLeft;
+    public Action exitDoor;
     public static InteractionEvents instance;
     private void Awake()
     {

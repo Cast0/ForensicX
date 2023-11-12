@@ -11,6 +11,7 @@ public class ScoreSystem : MonoBehaviour
     public SceneLoader sceneLoader;
     void Start()
     {
+        InteractionEvents.instance.exitDoor += DisplayScore;
         scorePanel.SetActive(false);
     }
 

@@ -14,7 +14,7 @@ public class ExitDoor : Interactable
     protected override void Interact()
     {
         dooropen = !dooropen;
-        InteractionEvents.instance?.exitDoor?.Invoke();
+        InteractionEvents.instance.exitDoor?.Invoke();
         // StartCoroutine(Loadlevel());
 
     }

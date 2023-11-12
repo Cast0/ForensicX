@@ -14,9 +14,9 @@ public abstract class Pickupable : MonoBehaviour
 
     public void BasePickup()
     {
-        if (useEvents)
-            GetComponent<InteractionEvents>().onInteract.Invoke();
-        Pickup();
+        // if (useEvents)
+        //     GetComponent<InteractionEvents>().onInteract.Invoke();
+        // Pickup();
     }
     protected virtual void Pickup()
     {

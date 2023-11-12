@@ -8,15 +8,17 @@ public class DeadBody : Interactable
 {
     // Start is called before the first frame update
     [SerializeField] CinemachineVirtualCamera virtualCam;
+    [SerializeField] PlayerUI playerUI;
     [SerializeField] Transform inspectPosition;
-    [SerializeField] Vector3 leftRot, rightRot;
+
     [SerializeField] GameObject deadBodyInspect;
     [SerializeField] Transform[] jointsToRotate;
+    [SerializeField] Collider collider;
     Transform prevFollow;
     private float rotationSpeed = 2;
     private void Start()
     {
-        
+
     }
 
     public void RotateLeft()
@@ -29,14 +31,15 @@ public class DeadBody : Interactable
         Debug.Log("Rotating Right");
 
     }
- 
-    public void LeaveInspection()
+
+    public void LeaveInspection() // this is attached to a button 
     {
-        InteractionEvents.instance.DeadBodyLeft?.Invoke();
+        InteractionEvents.instance.DeadBodyInteracted?.Invoke(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         virtualCam.Follow = prevFollow;
         deadBodyInspect?.SetActive(false);
+        collider.enabled = true;
     }
 
     // Update is called once per frame
@@ -46,12 +49,14 @@ public class DeadBody : Interactable
     }
     protected override void Interact()
     {
+        collider.enabled = false;
 
+        playerUI.ClearUI();
         prevFollow = virtualCam.Follow;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         virtualCam.Follow = inspectPosition;
-        InteractionEvents.instance.DeadBodyInteracted?.Invoke();
+        InteractionEvents.instance.DeadBodyInteracted?.Invoke(true);
         deadBodyInspect?.SetActive(true);
 
     }

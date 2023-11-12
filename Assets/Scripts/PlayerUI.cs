@@ -16,9 +16,23 @@ public class PlayerUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        InteractionEvents.instance.LaptopInteracted += ClearUI;
+        InteractionEvents.instance.DeadBodyInteracted += ClearUI;
     }
+    public void ClearUI(bool value)
+    {
+        if (!value) return;
 
+        PromptText.text = string.Empty;
+        Descriptiontext.text = string.Empty;
+        ItemDescription.SetActive(false);
+    }
+    public void ClearUI()
+    {
+        PromptText.text = string.Empty;
+        Descriptiontext.text = string.Empty;
+        ItemDescription.SetActive(false);
+    }
     public void UpdateText(string PromptMessage)
     {
         PromptText.text = PromptMessage;
