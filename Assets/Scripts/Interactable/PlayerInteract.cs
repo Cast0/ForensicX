@@ -1,10 +1,11 @@
 using System;
+using Cinemachine;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] pickanddropscripttest pickAndDrop;
-    // [SerializeField] Player_HandStatus player_HandStatus;
+    [SerializeField] CinemachineVirtualCamera virtualCamera;
     bool canInteract = true;
     public LayerMask InteractableLayerMask = 6;
     private PlayerUI PlayerUI;
@@ -18,6 +19,7 @@ public class PlayerInteract : MonoBehaviour
         InputManager.instance.G_Input += OnItemDrop;
         InteractionEvents.instance.LaptopInteracted += SetCanInteract;
         InteractionEvents.instance.DeadBodyInteracted += SetCanInteract;
+        InteractionEvents.instance.exitDoor += ExitDoor;
         PlayerUI = GetComponent<PlayerUI>();
     }
 
@@ -29,6 +31,10 @@ public class PlayerInteract : MonoBehaviour
     public void SetCanInteract(bool value)
     {
         canInteract = !value; // inverse the vvalue because true means laptop has been interacted and canInteract should be false and vice versa
+    }
+    public void ExitDoor()
+    {
+        canInteract = false; // inverse the vvalue because true means laptop has been interacted and canInteract should be false and vice versa
     }
     private void OnInteract()
     {
@@ -49,6 +55,7 @@ public class PlayerInteract : MonoBehaviour
 
 
         interactable.BaseInteract();
+        interactable.BaseInteract(virtualCamera);
 
 
     }

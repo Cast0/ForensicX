@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 
@@ -21,7 +22,13 @@ public abstract class Interactable : MonoBehaviour
         //     GetComponent<InteractionEvents>().onInteract.Invoke();
         Interact();
 
+    }
+    public void BaseInteract(CinemachineVirtualCamera virtualCamera)
+    {
 
+        // if (useEvents)
+        //     GetComponent<InteractionEvents>().onInteract.Invoke();
+        Interact(virtualCamera);
 
     }
     protected virtual void Interact()
@@ -29,4 +36,10 @@ public abstract class Interactable : MonoBehaviour
         // we wont have any code written in this function
         // this is a template function to be overridden by our subclass
     }
+    protected virtual void Interact(CinemachineVirtualCamera virtualCamera)
+    {
+        // we wont have any code written in this function
+        // this is a template function to be overridden by our subclass
+    }
+    
 }

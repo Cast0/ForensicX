@@ -11,7 +11,7 @@ public class InteractionEvents : MonoBehaviour
     // public UnityEvent DeadBodyInteracted;
     // public UnityEvent DeadBodyLeft;
     public Action exitDoor;
-    public static InteractionEvents instance;
+    public static InteractionEvents instance = null;
     private void Awake()
     {
         instance = this;

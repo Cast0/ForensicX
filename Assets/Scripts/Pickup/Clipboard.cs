@@ -7,7 +7,7 @@ using UnityEngine;
 public class Clipboard : Interactable
 {
     bool displayed = false;
-    [SerializeField] GameObject clipboardPanel;
+    [SerializeField] GameObject clipboardPanel, openCloseHint;
     [SerializeField] Vector3 positionOffset, rotationOffset;
     [SerializeField] Vector3 checklistPosition, checklistRotation;
     // Start is called before the first frame update
@@ -16,12 +16,13 @@ public class Clipboard : Interactable
         InputManager.instance.F_action += OnFPressed;
         InputManager.instance.G_Input += DisableChecklist;
         SetChecklistDisplay(false);
-
+        openCloseHint.SetActive(false);
     }
     private void SetChecklistDisplay(bool value)
     {
-        if (clipboardPanel.activeSelf == value) return;
+        if (clipboardPanel.activeSelf == value) return; // if the clipaboard is already active and is being reactivated, it will return
         clipboardPanel.SetActive(value);
+
         displayed = value;
         InteractionEvents.instance.checklistDisplayed?.Invoke(value);
         Cursor.visible = value;
@@ -38,17 +39,19 @@ public class Clipboard : Interactable
             SetChecklistDisplay(false);
         }
     }
-    private void DisableChecklist()
+    private void DisableChecklist()// this is when g is pressed meaning to drop the clipboard
     {
         // Debug.Log("Drop Item");
 
         if (displayed)
         {
 
+
             SetChecklistDisplay(false);
 
 
         }
+        openCloseHint.SetActive(false); // this is force disable since it wont depend if the checklist is displayed or not, rather only depend when clipabord is on hand
     }
 
     private async void OnFPressed()
@@ -80,7 +83,7 @@ public class Clipboard : Interactable
 
     private float lerpSpeed = 5.5f;
 
-    private async Task LerpToTargetAsync(Vector3 targetPos, Vector3 targetRot)
+    private async Task LerpToTargetAsync(Vector3 targetPos, Vector3 targetRot) // something like move the clipboard to display nad undisplay the chcecklist
     {
         Vector3 initialPosition = transform.localPosition;
         Quaternion initialRotation = transform.localRotation;
@@ -113,6 +116,7 @@ public class Clipboard : Interactable
     {
         transform.localPosition = positionOffset;
         transform.localRotation = Quaternion.Euler(rotationOffset);
+        openCloseHint.SetActive(true);
 
     }
 }

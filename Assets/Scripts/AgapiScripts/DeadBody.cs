@@ -7,18 +7,17 @@ using UnityEngine;
 public class DeadBody : Interactable
 {
     // Start is called before the first frame update
-    [SerializeField] CinemachineVirtualCamera virtualCam;
-    [SerializeField] PlayerUI playerUI;
+    CinemachineVirtualCamera SelfVirtualCam = null;
+
     [SerializeField] Transform inspectPosition;
 
     [SerializeField] GameObject deadBodyInspect;
     [SerializeField] Transform[] jointsToRotate;
     [SerializeField] Collider collider;
     Transform prevFollow;
-    private float rotationSpeed = 2;
     private void Start()
     {
-
+        deadBodyInspect?.SetActive(false);
     }
 
     public void RotateLeft()
@@ -37,7 +36,7 @@ public class DeadBody : Interactable
         InteractionEvents.instance.DeadBodyInteracted?.Invoke(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        virtualCam.Follow = prevFollow;
+        SelfVirtualCam.Follow = prevFollow;
         deadBodyInspect?.SetActive(false);
         collider.enabled = true;
     }
@@ -47,15 +46,16 @@ public class DeadBody : Interactable
     {
 
     }
-    protected override void Interact()
+    protected override void Interact(CinemachineVirtualCamera virtualCam)
     {
+        SelfVirtualCam = virtualCam;
         collider.enabled = false;
 
-        playerUI.ClearUI();
-        prevFollow = virtualCam.Follow;
+        // playerUI.ClearUI();
+        prevFollow = SelfVirtualCam.Follow;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        virtualCam.Follow = inspectPosition;
+        SelfVirtualCam.Follow = inspectPosition;
         InteractionEvents.instance.DeadBodyInteracted?.Invoke(true);
         deadBodyInspect?.SetActive(true);
 

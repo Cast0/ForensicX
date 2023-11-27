@@ -17,14 +17,9 @@ public class ChecklistHandler : MonoBehaviour // this class is attached to the t
 
     private void OnChecklistDisplayed(bool obj)
     {
-        if (obj)
-        {
-            gameObject.SetActive(true);
-        }
-        else
-        {
-            gameObject.SetActive(false);
-        }
+
+        gameObject.SetActive(obj);
+
     }
 
     public void Setup(Checklist _checklist)

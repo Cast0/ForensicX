@@ -7,8 +7,10 @@ public class SceneLoader : MonoBehaviour
 {
     public GameObject LoaderUI;
     public Slider progressSlider;
-    
-    
+    public static SceneLoader instance = null;
+    private void Awake() {
+        instance = this;
+    }
     
 
     public void LoadScene(int index)

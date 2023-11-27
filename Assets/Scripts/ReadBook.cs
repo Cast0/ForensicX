@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ReadBook : MonoBehaviour
+public class ReadBook : Interactable
 {
     [SerializeField]
     private RawImage _bookImage;
@@ -14,7 +14,7 @@ public class ReadBook : MonoBehaviour
     public GameObject ItemDescription;
 
     public GameObject MessagePanel;
-    public bool Action = false;
+    public bool canShow = false;
 
 
     public void Start()
@@ -27,32 +27,28 @@ public class ReadBook : MonoBehaviour
 
     }
 
-    public void Update()
+    protected override void Interact()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (Action == true)
-            {
-                MessagePanel.SetActive(false);
-                Action = false;
-                pickUpSound.Play();
-                _bookImage.enabled = true;
-                left.SetActive(true);
-                right.SetActive(true);
-                _BGImage.SetActive(false);
-                ItemDescription.SetActive(false);
-            }
-        }
+        if (!canShow) return;
+        // MessagePanel.SetActive(false);
+
+        pickUpSound.Play();
+        _bookImage.enabled = true;
+        left.SetActive(true);
+        right.SetActive(true);
+        _BGImage.SetActive(false);
+        // ItemDescription.SetActive(false);
+
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            MessagePanel.SetActive(true);
-            Action = true;
+            // MessagePanel.SetActive(true);
+            canShow = true;
             _BGImage.SetActive(true);
-            ItemDescription.SetActive(true);
+            // ItemDescription.SetActive(true);
 
         }
     }
@@ -61,12 +57,12 @@ public class ReadBook : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            MessagePanel.SetActive(false);
-            Action = false;
+            // MessagePanel.SetActive(false);
+            canShow = false;
             left.SetActive(false);
             right.SetActive(false);
             _BGImage.SetActive(false);
-            ItemDescription.SetActive(false);
+            // ItemDescription.SetActive(false);
 
             _bookImage.enabled = false;
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Note : MonoBehaviour
+public class Note : Interactable
 {
     [SerializeField]
     private RawImage _noteImage;
@@ -11,50 +11,44 @@ public class Note : MonoBehaviour
     public AudioSource pickUpSound;
 
     public GameObject MessagePanel;
-    public bool Action = false;
-   
+    private bool canShow = false;
 
     public void Start()
     {
         MessagePanel.SetActive(false);
-        note.SetActive(false);  
-        
+        note.SetActive(false);
+
     }
 
-    public void Update()
+    protected override void Interact()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (Action == true)
-            {
-                MessagePanel.SetActive(false);
-                Action = false;
-                pickUpSound.Play();
-                _noteImage.enabled = true;
-                note.SetActive(true);
-            }
-        }
+        if (!canShow) return;
+
+        pickUpSound.Play();
+        _noteImage.enabled = true;
+        note.SetActive(true);
+
+
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player")) 
+        if (other.gameObject.CompareTag("Player"))
         {
-            MessagePanel.SetActive(true);
-            Action = true;
-            
+            // MessagePanel.SetActive(true);
+
+            canShow = true;
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player")) 
-        {
-            MessagePanel.SetActive(false);
-            Action = false;
-            note.SetActive(false);
+        if (!other.gameObject.CompareTag("Player")) return;
+       
+        canShow = false;
+        note.SetActive(false);
 
-            _noteImage.enabled = false;
-        }
+        _noteImage.enabled = false;
+
     }
 }

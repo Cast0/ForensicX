@@ -9,6 +9,15 @@ public class Timer : MonoBehaviour
 
     public TextMeshProUGUI timerText;
     bool canTime = true;
+    public static Timer instance = null;
+    private void Awake()
+    {
+        instance = this;
+    }
+    public bool IsCountdownFinished()
+    {
+        return currentTimeInSeconds <= 0;
+    }
     private void Start()
     {
         currentTimeInSeconds = totalTimeInSeconds;
@@ -25,13 +34,15 @@ public class Timer : MonoBehaviour
         }
         else
         {
-
-            Debug.Log("Timer Finished!");
+            timerText.text = "Timer Finished!";
+            timerText.color = Color.red;
+            // Debug.Log("Timer Finished!");
         }
     }
     public void StopCount()
     {
-        canTime = true;
+        canTime = false;
+        timerText.gameObject.SetActive(false);
     }
 
     private void UpdateTimerDisplay()

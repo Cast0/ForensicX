@@ -18,6 +18,7 @@ public class PlayerUI : MonoBehaviour
     {
         InteractionEvents.instance.LaptopInteracted += ClearUI;
         InteractionEvents.instance.DeadBodyInteracted += ClearUI;
+        InteractionEvents.instance.exitDoor += ClearUI;
     }
     public void ClearUI(bool value)
     {

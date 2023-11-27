@@ -6,13 +6,18 @@ public class CaseManager : MonoBehaviour
 {
     public string caseWoundType;
     public int totalWounds;
-
+    public bool isRightProcedure { get; set; }
     int currentWOundCount;
     // Start is called before the first frame update
+
     public static CaseManager instance;
     private void Awake()
     {
         instance = this;
+    }
+    public bool isWoundsCompleted()
+    {
+        return currentWOundCount >= totalWounds;
     }
     public void IncrementWoundCount()
     {
@@ -34,4 +39,3 @@ public class CaseManager : MonoBehaviour
 
     }
 }
-
