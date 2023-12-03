@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checklistTitle: Sharp Force Injury
   checklistItem:
-  - Stab Wounds - this is a sample decription of the checklist
-  - Chop Wounds - this is a sample decription of the checklistthis is a sample decription
+  - 1. Stab Wounds - Result from a sharp object penetrating skin, with the injury
+    deeper than it is wide.
+  - 2. Chop Wounds - Caused by a heavy weapon with at least one sharp cutting edgeecription
     of the checklist
-  - Incised Wounds
-  - 'Strangulation Marks '
+  - 3. Incised Wounds - Clean, straight cut caused by a sharp edge.

@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checklistTitle: Blunt Force Injury
   checklistItem:
-  - 'Contusion '
-  - 'Abrasion '
-  - 'Laceration '
+  - 1. Contusion - Initially reddish or purplish mark, changes from blue to green,
+    then yellow during healing
+  - 2. Abrasion  - Superficial rub or wearing off of skin, often from a scrape or
+    brush burn
+  - 3. Laceration - Cut or wound; no missing skin. Typically caused by blunt trauma.
