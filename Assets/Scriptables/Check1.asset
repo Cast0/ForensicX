@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a74e82e827fb2f4c98afba0a178f594, type: 3}
   m_Name: Check1
   m_EditorClassIdentifier: 
-  checklistTitle: Blunt Force Injury
+  checklistTitle: Sharp Force Injury
   checklistItem:
-  - 'Contusion '
-  - 'Abrasion '
-  - 'Laceration '
+  - Stab Wounds - this is a sample decription of the checklist
+  - Chop Wounds - this is a sample decription of the checklistthis is a sample decription
+    of the checklist
+  - Incised Wounds
+  - 'Strangulation Marks '
