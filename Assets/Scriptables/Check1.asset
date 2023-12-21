@@ -16,6 +16,5 @@ MonoBehaviour:
   checklistItem:
   - 1. Stab Wounds - Result from a sharp object penetrating skin, with the injury
     deeper than it is wide.
-  - 2. Chop Wounds - Caused by a heavy weapon with at least one sharp cutting edgeecription
-    of the checklist
+  - 2. Chop Wounds - Caused by a heavy weapon with at least one sharp cutting edge.
   - 3. Incised Wounds - Clean, straight cut caused by a sharp edge.
