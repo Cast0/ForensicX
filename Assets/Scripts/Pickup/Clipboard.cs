@@ -7,6 +7,7 @@ using UnityEngine;
 public class Clipboard : Interactable
 {
     bool displayed = false;
+    bool isOnHand = false;
     [SerializeField] Pickupable pickupable;
     [SerializeField] GameObject clipboardPanel, openCloseHint;
     [SerializeField] Vector3 positionOffset, rotationOffset;
@@ -19,6 +20,7 @@ public class Clipboard : Interactable
         SetChecklistDisplay(false);
         pickupable.canDrop = true;
         openCloseHint.SetActive(false);
+        isOnHand = false;
     }
     private void SetChecklistDisplay(bool value)
     {
@@ -46,7 +48,7 @@ public class Clipboard : Interactable
     private void DisableChecklist()// this is when g is pressed meaning to drop the clipboard
     {
         // Debug.Log("Drop Item");
-
+        isOnHand = false;
         if (displayed)
         {
 
@@ -61,7 +63,7 @@ public class Clipboard : Interactable
     private async void OnFPressed()
     {
 
-
+        if (!isOnHand) return;
         if (!displayed)
         {
             pickupable.canDrop = false; // drop not allowed for clipabord because it wills tart playign animation
@@ -120,6 +122,7 @@ public class Clipboard : Interactable
 
     protected override void Interact()
     {
+        isOnHand = true;
         transform.localPosition = positionOffset;
         transform.localRotation = Quaternion.Euler(rotationOffset);
         openCloseHint.SetActive(true);
