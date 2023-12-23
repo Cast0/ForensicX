@@ -7,8 +7,8 @@ public class Timer : MonoBehaviour
     public static Timer instance = null;
 
     [SerializeField] private TextMeshProUGUI timerDisplay;
+    [SerializeField] float countdownTimeInSeconds = 180; // 3 minutes
     private Coroutine countdownCoroutine;
-    private float countdownTimeInSeconds = 180; // 5 minutes
     private bool isCountdownFinished = false;
 
     private void Awake()
@@ -42,8 +42,9 @@ public class Timer : MonoBehaviour
         {
             StopCoroutine(countdownCoroutine);
             countdownCoroutine = null;
-            timerDisplay.gameObject.SetActive(false);
         }
+
+        timerDisplay.gameObject.SetActive(false);
     }
 
     IEnumerator Countdown()
@@ -57,10 +58,25 @@ public class Timer : MonoBehaviour
             currentTime--;
         }
 
-        // Countdown finished
         isCountdownFinished = true;
-        UpdateTimerDisplay(0);
+        StartCoroutine(BlinkText());
+    }
+
+    IEnumerator BlinkText()
+    {
+        Color originalColor = timerDisplay.color;
+        timerDisplay.color = Color.red;
         timerDisplay.text = "Timer Finished!";
+
+        while (isCountdownFinished)
+        {
+            yield return new WaitForSeconds(0.5f);
+            timerDisplay.gameObject.SetActive(!timerDisplay.gameObject.activeSelf);
+        }
+
+        // Reset the color and set the text to an empty string when not blinking
+        timerDisplay.color = originalColor;
+        timerDisplay.text = "";
     }
 
     private void UpdateTimerDisplay(float timeInSeconds)
