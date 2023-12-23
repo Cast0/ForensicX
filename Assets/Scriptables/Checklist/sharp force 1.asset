@@ -10,18 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a74e82e827fb2f4c98afba0a178f594, type: 3}
-  m_Name: Check2.1
+  m_Name: sharp force 1
   m_EditorClassIdentifier: 
   checklistTitle: Sharp Force Injury
   checklistItem:
-<<<<<<<< Updated upstream:Assets/Scriptables/Check2.1.asset
-  - 4. Strangulation Marks (check which one of the two)
-  - Manual strangulation - Visible finger marks, irregular bruising on the neck's
-    sides and front.
-  - Ligature strangulation -Distinct ligature pattern, uniform and symmetrical bruising
-    encircling the neck.
-========
-  - {fileID: 11400000, guid: 8d3dfb2cc19ca0b4ca71c930457f85bb, type: 2}
   - {fileID: 11400000, guid: 0831974b4a6ab2842a71aaa98aa3a747, type: 2}
   - {fileID: 11400000, guid: c196de67e778e38459482cac51c08d60, type: 2}
->>>>>>>> Stashed changes:Assets/Scriptables/Checklist/Check2.asset
+  - {fileID: 11400000, guid: 8d3dfb2cc19ca0b4ca71c930457f85bb, type: 2}
+  - {fileID: 11400000, guid: d6e20be247799324f92becd6394b1b0e, type: 2}

@@ -690,8 +690,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checklist:
-  - {fileID: 11400000, guid: 4e0819b4ed54c4146a89e92614e6f195, type: 2}
-  - {fileID: 11400000, guid: 719555c6474e5fb4996a9c471fd616ec, type: 2}
+  - {fileID: 11400000, guid: 450d7328a24434243bb20152b9552dbd, type: 2}
+  - {fileID: 11400000, guid: 78576f514e6bb544fbd51083a0d85483, type: 2}
   checklistHandler: {fileID: 3549211551920397236}
   simpleScrollSnap: {fileID: 2012144268763309320}
 --- !u!1 &3773875391923664927
@@ -1298,7 +1298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f007e8518ebc2c445a72dfd8704c2aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useEvents: 0
   PromptMessage: '[E] to Pickup'
   Descriptiontext: maybe I can use this to list down my observation on the body,...
   pickupable: {fileID: 5574056294740966108}

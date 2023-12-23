@@ -8,9 +8,9 @@ public  class Pickupable : MonoBehaviour
     //add or remove an interaction event component to this game object.
     public bool canDrop = true;
     //message displayed to player when looking at an interactable
-    public string PromptMessage;
-    public string Descriptiontext;
-    // Start is called before the first frame update
+    // public string PromptMessage;
+    // public string Descriptiontext;
+    // // Start is called before the first frame update
 
     public void BasePickup()
     {

@@ -10,16 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a74e82e827fb2f4c98afba0a178f594, type: 3}
-  m_Name: Check3
+  m_Name: blunt force
   m_EditorClassIdentifier: 
-  checklistTitle: Case # 1
+  checklistTitle: Blunt Force Injury
   checklistItem:
-<<<<<<<< Updated upstream:Assets/Scriptables/Check3.asset
-  - asdasd
-  - asdasd
-  - asdasd
-========
+  - {fileID: 11400000, guid: b2293a23ca2a7744d8d8ac70f8ac0c98, type: 2}
   - {fileID: 11400000, guid: 255dec790a409aa4aafb3e9ea668f57a, type: 2}
   - {fileID: 11400000, guid: 06b09c12fdf3050419e69ae4a519690f, type: 2}
-  - {fileID: 11400000, guid: b2293a23ca2a7744d8d8ac70f8ac0c98, type: 2}
->>>>>>>> Stashed changes:Assets/Scriptables/Checklist/Check1.asset
