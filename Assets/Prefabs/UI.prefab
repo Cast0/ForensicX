@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerDisplay: {fileID: 0}
+  countdownTimeInSeconds: 180
 --- !u!1 &6961403173198272084
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerDisplay: {fileID: 7512971288022412338}
+  countdownTimeInSeconds: 180
 --- !u!1 &7693303499795999820
 GameObject:
   m_ObjectHideFlags: 0

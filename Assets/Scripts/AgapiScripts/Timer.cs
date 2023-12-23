@@ -7,9 +7,11 @@ public class Timer : MonoBehaviour
     public static Timer instance = null;
 
     [SerializeField] private TextMeshProUGUI timerDisplay;
-    [SerializeField] float countdownTimeInSeconds = 180; // 3 minutes
     private Coroutine countdownCoroutine;
+    private Coroutine blinkingCoroutine;
+    [SerializeField] float countdownTimeInSeconds = 180; // 5 minutes
     private bool isCountdownFinished = false;
+    bool blinkText = true;
 
     private void Awake()
     {
@@ -42,9 +44,17 @@ public class Timer : MonoBehaviour
         {
             StopCoroutine(countdownCoroutine);
             countdownCoroutine = null;
-        }
 
+        }
+        blinkText = false;
+        if (blinkingCoroutine != null)
+        {
+            StopCoroutine(blinkingCoroutine);
+            blinkingCoroutine = null;
+        }
         timerDisplay.gameObject.SetActive(false);
+
+
     }
 
     IEnumerator Countdown()
@@ -57,26 +67,28 @@ public class Timer : MonoBehaviour
             yield return new WaitForSeconds(1);
             currentTime--;
         }
-
         isCountdownFinished = true;
-        StartCoroutine(BlinkText());
-    }
+        blinkingCoroutine = StartCoroutine(BlinkText());
 
+
+
+    }
     IEnumerator BlinkText()
     {
-        Color originalColor = timerDisplay.color;
         timerDisplay.color = Color.red;
         timerDisplay.text = "Timer Finished!";
-
-        while (isCountdownFinished)
+        while (blinkText)
         {
-            yield return new WaitForSeconds(0.5f);
-            timerDisplay.gameObject.SetActive(!timerDisplay.gameObject.activeSelf);
+
+            yield return new WaitForSeconds(.5f);
+            timerDisplay.gameObject.SetActive(false);
+
+            yield return new WaitForSeconds(.5f);
+            timerDisplay.gameObject.SetActive(true);
         }
 
-        // Reset the color and set the text to an empty string when not blinking
-        timerDisplay.color = originalColor;
-        timerDisplay.text = "";
+
+
     }
 
     private void UpdateTimerDisplay(float timeInSeconds)
