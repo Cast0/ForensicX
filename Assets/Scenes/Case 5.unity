@@ -873,7 +873,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543dbe493403c8a458aebf4bfddc28f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useEvents: 0
   PromptMessage: '[E] to Pickup'
   Descriptiontext: maybe you can put something other than the brain right???
 --- !u!1001 &180694836
@@ -2541,7 +2540,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ac32f916b23a94abad08cb97c736f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useEvents: 0
   PromptMessage: '[E] to Open'
   Descriptiontext: what a nice cabinet....
   cabinetdoor: {fileID: 731034572}
@@ -2558,6 +2556,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1143625309404657499, guid: b8258d06c308fc04b997e898cf4c60d0, type: 3}
+      propertyPath: far clip plane
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 1143625309404657500, guid: b8258d06c308fc04b997e898cf4c60d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.48
@@ -6645,7 +6647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8f31c60ef7317a49ab7a7f11f2e9862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useEvents: 0
   PromptMessage: '[E] to Pickup'
   Descriptiontext: go chop some bones...
 --- !u!1001 &1492296203
@@ -6792,7 +6793,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee9c06df5c778a4eb8777116877ce74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useEvents: 0
   PromptMessage: '[E] to Pickup'
   Descriptiontext: maybe you will need this if you hurt yourself (be careful)...
 --- !u!1 &1497569432 stripped
@@ -7130,7 +7130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67953f57c8e2e1249afbd717a11c0991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useEvents: 0
   PromptMessage: '[E] to Pickup'
   Descriptiontext: a jar with a brain in it
 --- !u!1 &1543984268 stripped
@@ -9113,7 +9112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67953f57c8e2e1249afbd717a11c0991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useEvents: 0
   PromptMessage: '[E] to Pickup'
   Descriptiontext: a jar with a brain in it
 --- !u!4 &1877518397 stripped
@@ -10108,7 +10106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be82d0ab38b92cd4eb821df01b52adf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useEvents: 0
   PromptMessage: '[E] to Open'
   Descriptiontext: what a nice cabinet....
   cabinetdoor: {fileID: 2027712843}

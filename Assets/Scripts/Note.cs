@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Note : MonoBehaviour
+public class Note : Interactable
 {
 
     public GameObject noteDisplay;
@@ -18,7 +18,7 @@ public class Note : MonoBehaviour
 
     }
 
-    public void Update()
+    protected override void Interact()
     {
         if (!canShow) return;
         CaseManager.instance.TriggerNoteRead();
@@ -27,6 +27,7 @@ public class Note : MonoBehaviour
 
 
     }
+
 
     void OnTriggerEnter(Collider other)
     {

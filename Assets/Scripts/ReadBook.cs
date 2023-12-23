@@ -3,35 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ReadBook : MonoBehaviour
+public class ReadBook : Interactable
 {
 
     [SerializeField] GameObject bookDisplay;
     public AudioSource pickUpSound;
 
     bool canShow = false;
-    public GameObject MessagePanel;
+
     public bool Action = false;
 
 
     public void Start()
     {
 
-    
+
         bookDisplay.SetActive(false);
 
     }
 
-    public void Update()
+    protected override void Interact()
     {
         if (!canShow) return;
-        // MessagePanel.SetActive(false);
+
         CaseManager.instance.TriggerBookRead();
         pickUpSound.Play();
 
         bookDisplay.SetActive(true);
 
-        // ItemDescription.SetActive(false);
 
     }
 

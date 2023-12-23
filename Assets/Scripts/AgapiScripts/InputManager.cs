@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    public static InputManager instance;
+    public static InputManager instance = null;
     public Action playerInteract;
     public Action openItem;
     public Action G_Input;
     public Action F_action;
     // Start is called before the first frame update
-    bool canDrop  =true;
+    bool canDrop = true;
     private void Awake()
     {
         instance = this;
