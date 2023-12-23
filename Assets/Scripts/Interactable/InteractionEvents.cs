@@ -1,11 +1,5 @@
 using UnityEngine.Events;
 using UnityEngine;
-<<<<<<< Updated upstream
-
-public class InteractionEvents : MonoBehaviour
-{
-    public UnityEvent onInteract;
-=======
 using System;
 using System.Collections.Generic;
 
@@ -28,5 +22,4 @@ public class InteractionEvents : MonoBehaviour
     {
         instance = this;
     }
->>>>>>> Stashed changes
 }

@@ -31,17 +31,10 @@ public class ChecklistHandler : MonoBehaviour // this class is attached to the t
         foreach (var item in _checklist.checklistItem)
         {
 
-<<<<<<< Updated upstream
-            TextMeshProUGUI gO = Instantiate(checklistItems, parentTrans);
-            gO.gameObject.SetActive(true);
-            gO.text = item;
-            
-=======
             ChecklistToggle checklistToggle = Instantiate(checklistItemTemplate, parentTrans);
 
             checklistToggle.gameObject.SetActive(true);
             checklistToggle.SetupItem(item);
->>>>>>> Stashed changes
 
         }
 

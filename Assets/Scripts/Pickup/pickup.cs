@@ -5,15 +5,8 @@ using UnityEngine;
 public class pickanddropscripttest : MonoBehaviour
 {
     public GameObject camera;
+    [SerializeField] Transform objectOnHand;
     float maxpickupdistance = 3;
-<<<<<<< Updated upstream
-    GameObject itemcurrentlyholding;
-    bool isholding = false;
-
-    void Start()
-    { 
-
-=======
     GameObject itemcurrentlyholding = null;
     Pickupable pickupable = null;
     bool isholding = false;
@@ -25,59 +18,18 @@ public class pickanddropscripttest : MonoBehaviour
         InteractionEvents.instance.CameraChangeInteract += DropItem;
         InteractionEvents.instance.LaptopInteracted += DropItem;
         InteractionEvents.instance.exitDoor += DropItem;
->>>>>>> Stashed changes
     }
 
-    public void Update()
+
+
+    public void DropItem(bool value)
     {
-<<<<<<< Updated upstream
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Pickup();
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Drop();
-        }
-    }
 
-    public void Pickup()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, maxpickupdistance))
-        {
-            if (hit.transform.tag == "Pickable")
-            {
-
-                    if (isholding) Drop();
-                    {
-                        itemcurrentlyholding = hit.transform.gameObject;
-
-                        foreach (var c in hit.transform.GetComponentsInChildren<Collider>()) if (c != null) c.enabled = false;
-                        foreach (var r in hit.transform.GetComponentsInChildren<Rigidbody>()) if (r != null) r.isKinematic = true;
-
-                        itemcurrentlyholding.transform.parent = transform;
-                        itemcurrentlyholding.transform.localPosition = Vector3.zero;
-                        itemcurrentlyholding.transform.localEulerAngles = Vector3.zero;
-
-                    isholding = true;
-                    }
-            }
-        }
-    }
-
-    public void Drop()
-    {
-        itemcurrentlyholding.transform.parent = null;
-        foreach (var c in itemcurrentlyholding.GetComponentsInChildren<Collider>()) if (c != null) c.enabled = true;
-        foreach (var r in itemcurrentlyholding.GetComponentsInChildren<Rigidbody>()) if (r != null) r.isKinematic = false;
-        isholding = false;
-=======
         if (itemcurrentlyholding == null) return;
+        if (!value) return;
         Drop(itemcurrentlyholding);
-        Player_HandStatus.triggerClipboard(gameObject);
+        // Player_HandStatus.triggerClipboard(gameObject); // use non clipboard game object to trigger false on clipboardonhand
     }
-
     public void DropItem()
     {
         if (itemcurrentlyholding == null) return;
@@ -128,7 +80,6 @@ public class pickanddropscripttest : MonoBehaviour
     //     foreach (var c in itemcurrentlyholding.GetComponentsInChildren<Collider>()) if (c != null) c.enabled = true;
     //     foreach (var r in itemcurrentlyholding.GetComponentsInChildren<Rigidbody>()) if (r != null) r.isKinematic = false;
     //     isholding = false;
->>>>>>> Stashed changes
 
     //     itemcurrentlyholding.transform.eulerAngles = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     //     itemcurrentlyholding = null;
@@ -136,8 +87,6 @@ public class pickanddropscripttest : MonoBehaviour
     // }
 
 
-<<<<<<< Updated upstream
-=======
     public void Pickup(Pickupable pickedUp) // assuming that this class is attached tot he gameobject of where the item is to be placed
     {
 
@@ -196,5 +145,4 @@ public class pickanddropscripttest : MonoBehaviour
 
     }
 
->>>>>>> Stashed changes
 }

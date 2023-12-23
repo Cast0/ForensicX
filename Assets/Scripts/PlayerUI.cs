@@ -9,14 +9,6 @@ public class PlayerUI : MonoBehaviour
 
     void Start()
     {
-<<<<<<< Updated upstream
-
-    }
-
-    public void UpdateText(string PromptMessage)
-    {
-        PromptText.text = PromptMessage;
-=======
         InteractionEvents.instance.LaptopInteracted += ClearUI;
         InteractionEvents.instance.DeadBodyInteracted += ClearUI;
         InteractionEvents.instance.exitDoor += ClearUI;
@@ -33,7 +25,6 @@ public class PlayerUI : MonoBehaviour
     public void ClearUI()
     {
         ClearUIInternal();
->>>>>>> Stashed changes
     }
 
     private void ClearUIInternal()

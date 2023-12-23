@@ -97,8 +97,6 @@ namespace StarterAssets
 
 		private void Start()
 		{
-<<<<<<< Updated upstream
-=======
 			InteractionEvents.instance.LaptopInteracted += OnInteracted;
 			InteractionEvents.instance.DeadBodyInteracted += OnInteracted;
 			InteractionEvents.instance.CameraChangeInteract += OnInteracted;
@@ -120,7 +118,6 @@ namespace StarterAssets
 
 
 
->>>>>>> Stashed changes
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM
@@ -134,8 +131,6 @@ namespace StarterAssets
 			_fallTimeoutDelta = FallTimeout;
 		}
 
-<<<<<<< Updated upstream
-=======
 		private void OnInteracted(bool obj)
 		{
 			if (obj)
@@ -152,7 +147,6 @@ namespace StarterAssets
 			}
 		}
 
->>>>>>> Stashed changes
 		private void Update()
 		{
 			JumpAndGravity();

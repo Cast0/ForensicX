@@ -7,11 +7,6 @@ public class SceneLoader : MonoBehaviour
 {
     public GameObject LoaderUI;
     public Slider progressSlider;
-<<<<<<< Updated upstream
-    
-    
-    
-=======
     public static SceneLoader instance = null;
     private void Awake()
     {
@@ -21,7 +16,6 @@ public class SceneLoader : MonoBehaviour
     {
         LoaderUI.SetActive(false);
     }
->>>>>>> Stashed changes
 
     public void LoadScene(int index)
     {
