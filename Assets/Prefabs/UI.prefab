@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4861701954789092205}
   - component: {fileID: 7108125886881767312}
   - component: {fileID: 7512971288022412338}
-  - component: {fileID: 8444463314628147085}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -137,20 +136,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &8444463314628147085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5465504622251867333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f42b3db122dcc4fa6a023b95120ee7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerDisplay: {fileID: 0}
-  countdownTimeInSeconds: 180
 --- !u!1 &6961403173198272084
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5997374941844009467}
-  - component: {fileID: 5741870927558702776}
+  - component: {fileID: 7935562870606637111}
   m_Layer: 5
   m_Name: Timer Countdown
   m_TagString: Untagged
@@ -188,7 +173,7 @@ RectTransform:
   m_AnchoredPosition: {x: 795.11, y: 477.5}
   m_SizeDelta: {x: 329.77466, y: 125.00293}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5741870927558702776
+--- !u!114 &7935562870606637111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,7 +182,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6961403173198272084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f42b3db122dcc4fa6a023b95120ee7, type: 3}
+  m_Script: {fileID: 11500000, guid: 09860a32adc1712419b30aeae920c4a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timerDisplay: {fileID: 7512971288022412338}
