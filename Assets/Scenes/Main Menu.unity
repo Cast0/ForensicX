@@ -190,9 +190,9 @@ RectTransform:
   m_Father: {fileID: 2093336114}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &20598190
 MonoBehaviour:
@@ -653,9 +653,9 @@ RectTransform:
   m_Father: {fileID: 184297880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &82819518
 MonoBehaviour:
@@ -749,7 +749,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 5, y: -0.00088500977}
-  m_SizeDelta: {x: 0, y: 1098.97}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &109678699
 MonoBehaviour:
@@ -771,25 +771,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<b>Name:</b> Jericho Galang
+  m_text: '<b>Name:</b> Jennett Beron Aguilar
 
 
-    <b>Gender:</b> Male
+    <b>Gender:</b> Female
 
 
     <b>Age:</b>
-    4 Years Old
+    31 Years Old
 
 
-
-
-
-    <b>Details of Incident: </b>
-
-    A four-year-old child
-    in the town of Bamban in Tarlac died after alleged maltreatment by father''s
-    live-in partner. According to Jericho''s Death Certificate, he had Septic shock.
-    In the previous medical certificate before the child''s death.'
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1260,7 +1252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 831484089}
   m_Horizontal: 0
-  m_Vertical: 1
+  m_Vertical: 0
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
@@ -1350,7 +1342,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 5, y: -0.00088500977}
-  m_SizeDelta: {x: 0, y: 1554.3301}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &192335990
 MonoBehaviour:
@@ -1381,17 +1373,7 @@ MonoBehaviour:
     <b>Age:</b>
     24 Years Old
 
-
-
-
-    <b>Details of Incident: </b>
-
-    John Matthew Salilig,
-    a student at Adamson University, was discovered lifeless in an empty area in
-    Imus, Cavite, approximately ten days following his reported disappearance on
-    February 18. His remains were in such a state that they were difficult to identify.
-    Authorities have indicated that his death is believed to have resulted from a
-    hazing incident perpetrated by the Tau Gamma Phi (Triskelion) fraternity.'
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1538,7 +1520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 109678698}
   m_Horizontal: 0
-  m_Vertical: 1
+  m_Vertical: 0
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
@@ -1817,8 +1799,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 481128089}
   m_HandleRect: {fileID: 481128088}
   m_Direction: 2
-  m_Value: 1.0000006
-  m_Size: 0.19585177
+  m_Value: 1.000003
+  m_Size: 0.55618244
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2305,8 +2287,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 918581952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.80791855}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2593,8 +2575,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 701331041}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.8041482}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3178,8 +3160,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 399823631}
   m_HandleRect: {fileID: 399823630}
   m_Direction: 2
-  m_Value: 1.0000006
-  m_Size: 0.19208148
+  m_Value: 1.0000035
+  m_Size: 0.5890151
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3681,8 +3663,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2085256256}
   m_HandleRect: {fileID: 2085256255}
   m_Direction: 2
-  m_Value: 1.0000008
-  m_Size: 0.25621137
+  m_Value: 1.0000035
+  m_Size: 0.5890151
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3852,7 +3834,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 5, y: -0.00088500977}
-  m_SizeDelta: {x: 0, y: 1098.97}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &775847899
 MonoBehaviour:
@@ -3884,15 +3866,7 @@ MonoBehaviour:
     4 Years Old
 
 
-
-
-
-    <b>Details of Incident: </b>
-
-    A four-year-old child
-    in the town of Bamban in Tarlac died after alleged maltreatment by father''s
-    live-in partner. According to Jericho''s Death Certificate, he had Septic shock.
-    In the previous medical certificate before the child''s death.'
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4217,7 +4191,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 5, y: -0.00088500977}
-  m_SizeDelta: {x: 0, y: 1592.27}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &831484090
 MonoBehaviour:
@@ -4239,13 +4213,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<b>Name:</b> Cesar Tiodanco\n\n<b>Gender:</b> Male\n\n<b>Age:</b> 44 Years
-    Old\n\n\n\n<b>Details of Incident: </b>\nThe Manila Police District (MPD) said
-    Monday that Joel Alejandro confronted his neighbor Cesar Tiodanco in Brgy. 649,
-    Baseco, around 11 p.m. Sunday and grumbled about the loud sound from the victim\u2019s
-    house. It was unclear what kind of noise irked the suspect. The two argued, during
-    which Alejandro attacked Tiodanco with a knife,and Tiodanco was brought to the
-    Gat Andres Bonifacio Hospital but was declared dead on arrival."
+  m_text: '<b>Name:</b> Cesar Tiodanco
+
+
+    <b>Gender:</b> Male
+
+
+    <b>Age:</b>
+    44 Years Old
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4467,7 +4444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 1392884761}
   m_Horizontal: 0
-  m_Vertical: 1
+  m_Vertical: 0
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
@@ -4556,9 +4533,9 @@ RectTransform:
   m_Father: {fileID: 874528445}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &875815948
 MonoBehaviour:
@@ -5131,8 +5108,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1697425392}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.81840765}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5892,7 +5869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 192335989}
   m_Horizontal: 0
-  m_Vertical: 1
+  m_Vertical: 0
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
@@ -5962,7 +5939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1063810989
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6405,8 +6382,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 931797859}
   m_HandleRect: {fileID: 931797858}
   m_Direction: 2
-  m_Value: 1.0000006
-  m_Size: 0.18159232
+  m_Value: 1.000003
+  m_Size: 0.55618244
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7090,8 +7067,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1713869027}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.7437886}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7956,9 +7933,9 @@ RectTransform:
   m_Father: {fileID: 195609072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1364388777
 MonoBehaviour:
@@ -8123,7 +8100,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 5, y: -0.00088500977}
-  m_SizeDelta: {x: 0, y: 1706.1099}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1392884762
 MonoBehaviour:
@@ -8148,24 +8125,13 @@ MonoBehaviour:
   m_text: '<b>Name:</b> Reyna Leanne Daguinsin
 
 
-    <b>Gender:</b> Fenale
+    <b>Gender:</b> Female
 
 
     <b>Age:</b>
-    44 Years Old
+    24 Years Old
 
-
-
-
-    <b>Details of Incident: </b>
-
-    A graduating student was
-    found deceased in her dormitory, with no signs of assault. The discovery was
-    made by the landlord, prompted by the student''s prolonged absence and concerns
-    raised by her parents. A CCTV recording outside the dormitory captures a man
-    walking by with an unidentified object in his hands. The police are currently
-    conducting an investigation to determine the nature of the object and the circumstances
-    surrounding the incident.'
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8902,8 +8868,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1244903402}
   m_HandleRect: {fileID: 1244903401}
   m_Direction: 2
-  m_Value: 1.0000008
-  m_Size: 0.25621137
+  m_Value: 1.000003
+  m_Size: 0.55618244
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9036,7 +9002,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1624500438
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10817,8 +10783,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 17797556}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.7437886}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10895,9 +10861,9 @@ RectTransform:
   m_Father: {fileID: 1046792647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2086198877
 MonoBehaviour:
@@ -11004,7 +10970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 775847898}
   m_Horizontal: 0
-  m_Vertical: 1
+  m_Vertical: 0
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
@@ -14923,7 +14889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1975473130947487
 GameObject:
   m_ObjectHideFlags: 0
@@ -31450,7 +31416,7 @@ RectTransform:
   m_Father: {fileID: 224251993885493647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -2.5, y: 0}
   m_SizeDelta: {x: 4.9999, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
