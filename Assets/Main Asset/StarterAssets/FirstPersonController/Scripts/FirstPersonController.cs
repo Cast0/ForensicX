@@ -97,6 +97,30 @@ namespace StarterAssets
 
 		private void Start()
 		{
+<<<<<<< Updated upstream
+=======
+			InteractionEvents.instance.LaptopInteracted += OnInteracted;
+			InteractionEvents.instance.DeadBodyInteracted += OnInteracted;
+			InteractionEvents.instance.CameraChangeInteract += OnInteracted;
+			InteractionEvents.instance.checklistDisplayed += OnInteracted;
+			InteractionEvents.instance.exitDoor += () =>
+			{
+				_controller.enabled = false;
+
+
+			};
+			InteractionEvents.instance.ContinuePlaying += () =>
+			{
+				_controller.enabled = true;
+
+			};
+
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
+
+
+
+>>>>>>> Stashed changes
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM
@@ -110,6 +134,25 @@ namespace StarterAssets
 			_fallTimeoutDelta = FallTimeout;
 		}
 
+<<<<<<< Updated upstream
+=======
+		private void OnInteracted(bool obj)
+		{
+			if (obj)
+			{
+				_playerInput.enabled = false;
+				_input.enabled = false;
+				_controller.enabled = false;
+			}
+			else
+			{
+				_playerInput.enabled = true;
+				_input.enabled = true;
+				_controller.enabled = true;
+			}
+		}
+
+>>>>>>> Stashed changes
 		private void Update()
 		{
 			JumpAndGravity();

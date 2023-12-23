@@ -6,16 +6,31 @@ public class pickanddropscripttest : MonoBehaviour
 {
     public GameObject camera;
     float maxpickupdistance = 3;
+<<<<<<< Updated upstream
     GameObject itemcurrentlyholding;
     bool isholding = false;
 
     void Start()
     { 
 
+=======
+    GameObject itemcurrentlyholding = null;
+    Pickupable pickupable = null;
+    bool isholding = false;
+
+    void Start()
+    {
+        InputManager.instance.G_Input += DropItem;
+        InteractionEvents.instance.DeadBodyInteracted += DropItem;
+        InteractionEvents.instance.CameraChangeInteract += DropItem;
+        InteractionEvents.instance.LaptopInteracted += DropItem;
+        InteractionEvents.instance.exitDoor += DropItem;
+>>>>>>> Stashed changes
     }
 
     public void Update()
     {
+<<<<<<< Updated upstream
         if (Input.GetKeyDown(KeyCode.E))
         {
             Pickup();
@@ -57,11 +72,129 @@ public class pickanddropscripttest : MonoBehaviour
         foreach (var c in itemcurrentlyholding.GetComponentsInChildren<Collider>()) if (c != null) c.enabled = true;
         foreach (var r in itemcurrentlyholding.GetComponentsInChildren<Rigidbody>()) if (r != null) r.isKinematic = false;
         isholding = false;
+=======
+        if (itemcurrentlyholding == null) return;
+        Drop(itemcurrentlyholding);
+        Player_HandStatus.triggerClipboard(gameObject);
+    }
 
-        itemcurrentlyholding.transform.eulerAngles = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+    public void DropItem()
+    {
+        if (itemcurrentlyholding == null) return;
+        Drop(itemcurrentlyholding);
+        // Player_HandStatus.triggerClipboard(gameObject); // use non clipboard game object to trigger false on clipboardonhand
+    }
+
+    // public void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.E))
+    //     {
+    //         Pickup();
+    //     }
+    //     if (Input.GetKeyDown(KeyCode.G))
+    //     {
+    //         Drop();
+    //     }
+    // }
+
+    // private void Pickup()
+    // {
+    //     RaycastHit hit;
+    //     if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, maxpickupdistance))
+    //     {
+    //         if (hit.transform.tag == "Pickable")
+    //         {
+
+    //             if (isholding) Drop();
+    //             {
+    //                 itemcurrentlyholding = hit.transform.gameObject;
+
+    //                 foreach (var c in hit.transform.GetComponentsInChildren<Collider>()) if (c != null) c.enabled = false;
+    //                 foreach (var r in hit.transform.GetComponentsInChildren<Rigidbody>()) if (r != null) r.isKinematic = true;
+
+    //                 itemcurrentlyholding.transform.parent = transform;
+    //                 itemcurrentlyholding.transform.localPosition = Vector3.zero;
+    //                 itemcurrentlyholding.transform.localEulerAngles = Vector3.zero;
+
+    //                 isholding = true;
+    //             }
+    //         }
+    //     }
+    // }
+
+    // private void Drop()
+    // {
+    //     itemcurrentlyholding.transform.parent = null;
+    //     foreach (var c in itemcurrentlyholding.GetComponentsInChildren<Collider>()) if (c != null) c.enabled = true;
+    //     foreach (var r in itemcurrentlyholding.GetComponentsInChildren<Rigidbody>()) if (r != null) r.isKinematic = false;
+    //     isholding = false;
+>>>>>>> Stashed changes
+
+    //     itemcurrentlyholding.transform.eulerAngles = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+    //     itemcurrentlyholding = null;
+
+    // }
+
+
+<<<<<<< Updated upstream
+=======
+    public void Pickup(Pickupable pickedUp) // assuming that this class is attached tot he gameobject of where the item is to be placed
+    {
+
+        pickupable = pickedUp;
+        pickedUp.TryGetComponent<Collider>(out Collider component);
+        component.enabled = false;
+
+        try
+        {
+            pickedUp.TryGetComponent<Rigidbody>(out Rigidbody rigidbody);
+            rigidbody.isKinematic = true;
+        }
+        catch
+        {
+            Debug.LogWarning("Kinematics error");
+        }
+
+
+
+        if (isholding) Drop(itemcurrentlyholding);
+
+        itemcurrentlyholding = pickedUp.gameObject;
+        pickedUp.transform.parent = objectOnHand;
+        pickedUp.transform.localPosition = Vector3.zero;
+        pickedUp.transform.localRotation = Quaternion.identity;
+
+        isholding = true;
+
+
+
+    }
+    private void Drop(GameObject dropping)
+    {
+        if (!pickupable.canDrop) return;
+        if (dropping != null)
+        {
+            dropping.TryGetComponent<Collider>(out Collider component);
+            component.enabled = true;
+            dropping.transform.parent = null;
+            try
+            {
+                dropping.TryGetComponent<Rigidbody>(out Rigidbody rigidbody);
+                rigidbody.isKinematic = false;
+            }
+            catch
+            {
+                Debug.LogWarning("Kinematics error");
+            }
+        }
+
+
+        isholding = false;
         itemcurrentlyholding = null;
+
+
 
     }
 
-
+>>>>>>> Stashed changes
 }

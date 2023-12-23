@@ -6,7 +6,7 @@ public class ChecklistHandler : MonoBehaviour // this class is attached to the t
 {
 
     [SerializeField] TextMeshProUGUI title;
-    [SerializeField] TextMeshProUGUI checklistItems;
+    [SerializeField] ChecklistToggle checklistItemTemplate;
     [SerializeField] Transform parentTrans;
     VerticalLayoutGroup verticalLayoutGroup;
     private void Start()
@@ -31,10 +31,17 @@ public class ChecklistHandler : MonoBehaviour // this class is attached to the t
         foreach (var item in _checklist.checklistItem)
         {
 
+<<<<<<< Updated upstream
             TextMeshProUGUI gO = Instantiate(checklistItems, parentTrans);
             gO.gameObject.SetActive(true);
             gO.text = item;
             
+=======
+            ChecklistToggle checklistToggle = Instantiate(checklistItemTemplate, parentTrans);
+
+            checklistToggle.gameObject.SetActive(true);
+            checklistToggle.SetupItem(item);
+>>>>>>> Stashed changes
 
         }
 

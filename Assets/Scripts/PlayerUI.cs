@@ -1,42 +1,67 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class PlayerUI : MonoBehaviour
 {
-    [SerializeField]
-    private TextMeshProUGUI PromptText;
-    [SerializeField]
-    private GameObject ItemDescription;
-    [SerializeField]
-    private TextMeshProUGUI Descriptiontext;
+    [SerializeField] private TextMeshProUGUI promptText;
+    [SerializeField] private GameObject itemDescription;
+    [SerializeField] private TextMeshProUGUI descriptionText;
 
-
-    // Start is called before the first frame update
     void Start()
     {
+<<<<<<< Updated upstream
 
     }
 
     public void UpdateText(string PromptMessage)
     {
         PromptText.text = PromptMessage;
+=======
+        InteractionEvents.instance.LaptopInteracted += ClearUI;
+        InteractionEvents.instance.DeadBodyInteracted += ClearUI;
+        InteractionEvents.instance.exitDoor += ClearUI;
+
+        InteractionEvents.instance.CameraChangeInteract += ClearUI;
     }
 
-    public void UpdateDescriptionText(string DescriptionText)
+    public void ClearUI(bool value)
     {
-        Descriptiontext.text = DescriptionText;
+        if (!value) return;
+        ClearUIInternal();
     }
 
-    public void Descriptionshow()
+    public void ClearUI()
     {
-        ItemDescription.SetActive(true);
+        ClearUIInternal();
+>>>>>>> Stashed changes
+    }
+
+    private void ClearUIInternal()
+    {
+        promptText.text = string.Empty;
+        descriptionText.text = string.Empty;
+        itemDescription.SetActive(false);
+    }
+
+    public void UpdateText(string promptMessage)
+    {
+        promptText.text = promptMessage;
+    }
+
+    public void UpdateDescriptionText(string descriptionText)
+    {
+        this.descriptionText.text = descriptionText;
+    }
+
+    public void Descriptionshow(string description, string prompt)
+    {
+        promptText.text = prompt;
+        descriptionText.text = description;
+        itemDescription.SetActive(true);
     }
 
     public void Descriptionhide()
     {
-        ItemDescription.SetActive(false);
+        ClearUIInternal();
     }
-
 }

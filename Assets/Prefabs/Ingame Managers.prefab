@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3995319369650174955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 64342433978717282}
+  - component: {fileID: 8598493046161745404}
+  - component: {fileID: 4673384176465527896}
+  - component: {fileID: 3588623059608438440}
+  m_Layer: 0
+  m_Name: Ingame Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &64342433978717282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3995319369650174955}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8598493046161745404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3995319369650174955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c5670c83ccf6014a8c04d036e97112a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4673384176465527896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3995319369650174955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2cdfd9b55f080343a28823fd07a1d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3588623059608438440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3995319369650174955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba9aa6b98d186846bfb88bdbd4b5f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caseWoundType: 
+  totalWounds: 3
+  caseItems:
+  - {fileID: 11400000, guid: 06b09c12fdf3050419e69ae4a519690f, type: 2}
+  totalCaseItems:
+  - {fileID: 11400000, guid: 255dec790a409aa4aafb3e9ea668f57a, type: 2}
+  - {fileID: 11400000, guid: 0831974b4a6ab2842a71aaa98aa3a747, type: 2}
+  - {fileID: 11400000, guid: 06b09c12fdf3050419e69ae4a519690f, type: 2}
+  - {fileID: 11400000, guid: c196de67e778e38459482cac51c08d60, type: 2}
+  - {fileID: 11400000, guid: b2293a23ca2a7744d8d8ac70f8ac0c98, type: 2}
+  - {fileID: 11400000, guid: 8d3dfb2cc19ca0b4ca71c930457f85bb, type: 2}
+  - {fileID: 11400000, guid: d6e20be247799324f92becd6394b1b0e, type: 2}

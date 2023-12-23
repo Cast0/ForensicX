@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class Note : MonoBehaviour
 {
-    [SerializeField]
-    private RawImage _noteImage;
-    public GameObject note;
+
+    public GameObject noteDisplay;
     public AudioSource pickUpSound;
 
+<<<<<<< Updated upstream
     public GameObject MessagePanel;
     public bool Action = false;
    
@@ -19,10 +19,20 @@ public class Note : MonoBehaviour
         MessagePanel.SetActive(false);
         note.SetActive(false);  
         
+=======
+    private bool canShow = false;
+
+    public void Start()
+    {
+
+        noteDisplay.SetActive(false);
+
+>>>>>>> Stashed changes
     }
 
     public void Update()
     {
+<<<<<<< Updated upstream
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (Action == true)
@@ -34,6 +44,14 @@ public class Note : MonoBehaviour
                 note.SetActive(true);
             }
         }
+=======
+        if (!canShow) return;
+        CaseManager.instance.TriggerNoteRead();
+        pickUpSound.Play();
+        noteDisplay.SetActive(true);
+
+
+>>>>>>> Stashed changes
     }
 
     void OnTriggerEnter(Collider other)
@@ -48,6 +66,7 @@ public class Note : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
+<<<<<<< Updated upstream
         if (other.gameObject.CompareTag("Player")) 
         {
             MessagePanel.SetActive(false);
@@ -56,5 +75,11 @@ public class Note : MonoBehaviour
 
             _noteImage.enabled = false;
         }
+=======
+        if (!other.gameObject.CompareTag("Player")) return;
+
+        canShow = false;
+        noteDisplay.SetActive(false);
+>>>>>>> Stashed changes
     }
 }

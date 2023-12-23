@@ -13,6 +13,9 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+    // private void GetCasesStatus(){
+    //     PlayerPrefs.GetInt("unlockedCase",1);
+    // }
 }
 
 

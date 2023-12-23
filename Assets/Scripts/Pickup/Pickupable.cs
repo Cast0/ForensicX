@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public abstract class Pickupable : MonoBehaviour
+public  class Pickupable : MonoBehaviour
 {
+<<<<<<< Updated upstream
     //add or remove an interaction event component to this game object.
     public bool useEvents;
     //message displayed to player when looking at an interactable
@@ -23,4 +24,8 @@ public abstract class Pickupable : MonoBehaviour
         // we wont have any code written in this function
         // this is a template function to be overridden by our subclass
     }
+=======
+    public bool canDrop = true;
+    
+>>>>>>> Stashed changes
 }

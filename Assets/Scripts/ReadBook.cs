@@ -5,13 +5,10 @@ using UnityEngine.UI;
 
 public class ReadBook : MonoBehaviour
 {
-    [SerializeField]
-    private RawImage _bookImage;
-    public GameObject left;
-    public GameObject right;
+
+    [SerializeField] GameObject bookDisplay;
     public AudioSource pickUpSound;
-    public GameObject _BGImage;
-    public GameObject ItemDescription;
+
 
     public GameObject MessagePanel;
     public bool Action = false;
@@ -19,16 +16,15 @@ public class ReadBook : MonoBehaviour
 
     public void Start()
     {
-        MessagePanel.SetActive(false);
-        left.SetActive(false);
-        right.SetActive(false);
-        _BGImage.SetActive(false);
-        ItemDescription.SetActive(false);
+
+    
+        bookDisplay.SetActive(false);
 
     }
 
     public void Update()
     {
+<<<<<<< Updated upstream
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (Action == true)
@@ -43,16 +39,34 @@ public class ReadBook : MonoBehaviour
                 ItemDescription.SetActive(false);
             }
         }
+=======
+        if (!canShow) return;
+        // MessagePanel.SetActive(false);
+        CaseManager.instance.TriggerBookRead();
+        pickUpSound.Play();
+
+        bookDisplay.SetActive(true);
+
+        // ItemDescription.SetActive(false);
+
+>>>>>>> Stashed changes
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+<<<<<<< Updated upstream
             MessagePanel.SetActive(true);
             Action = true;
             _BGImage.SetActive(true);
             ItemDescription.SetActive(true);
+=======
+            // MessagePanel.SetActive(true);
+            canShow = true;
+
+            // ItemDescription.SetActive(true);
+>>>>>>> Stashed changes
 
         }
     }
@@ -61,6 +75,7 @@ public class ReadBook : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+<<<<<<< Updated upstream
             MessagePanel.SetActive(false);
             Action = false;
             left.SetActive(false);
@@ -69,6 +84,11 @@ public class ReadBook : MonoBehaviour
             ItemDescription.SetActive(false);
 
             _bookImage.enabled = false;
+=======
+            // MessagePanel.SetActive(false);
+            canShow = false;
+            bookDisplay.SetActive(false);
+>>>>>>> Stashed changes
         }
     }
 }
