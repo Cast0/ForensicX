@@ -40314,6 +40314,10 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4001855677549330603, guid: 589ba0fa570083a42af1849c69b0c471, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6134408570558664200, guid: 589ba0fa570083a42af1849c69b0c471, type: 3}
       propertyPath: m_Name
       value: Clipboard (1)
