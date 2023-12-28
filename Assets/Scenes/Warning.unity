@@ -532,7 +532,7 @@ MonoBehaviour:
   m_text: This game is designed for educational purposes only, delving into forensice
     science pathology based on life scenarios. While inspired by actual events, all
     names have been omitted to respect the privacy of individuals and their families.
-    Approach the game with sensitivity, as it explores crime scenes and evidnece
+    Approach the game with sensitivity, as it explores crime scenes and evidence
     analysis, maintaining  a commitment to educational integrity and ethical gameplay.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}

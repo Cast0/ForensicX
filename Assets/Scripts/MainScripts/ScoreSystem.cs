@@ -51,7 +51,7 @@ public class ScoreSystem : MonoBehaviour
             item.gameObject.SetActive(false);
         }
         exitButton.SetActive(false);
-        SceneLoader.instance?.LoadScene(0);
+        SceneLoader.instance?.LoadScene(1);
 
     }
     public void LeaveCase()

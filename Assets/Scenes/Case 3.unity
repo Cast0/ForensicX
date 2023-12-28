@@ -36869,6 +36869,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3588623059608438440, guid: 36d0f0b92c0531645af89c1b3fb8f6ae, type: 3}
+      propertyPath: totalWounds
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 3995319369650174955, guid: 36d0f0b92c0531645af89c1b3fb8f6ae, type: 3}
       propertyPath: m_Name
       value: Ingame Managers
@@ -37064,6 +37068,10 @@ PrefabInstance:
     - target: {fileID: 2964176634286406954, guid: 54689a259462177489d5150b8f96d0f1, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163221969968020224, guid: 54689a259462177489d5150b8f96d0f1, type: 3}
+      propertyPath: m_Name
+      value: wounds inspected
       objectReference: {fileID: 0}
     - target: {fileID: 4999440062377220359, guid: 54689a259462177489d5150b8f96d0f1, type: 3}
       propertyPath: m_Name
@@ -38219,11 +38227,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 660669286073718932, guid: 1e2caec477e1efa4ba16ee65a0fa358e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 611.75586
+      value: 780
       objectReference: {fileID: 0}
     - target: {fileID: 660669286073718932, guid: 1e2caec477e1efa4ba16ee65a0fa358e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -251.34958
+      value: -385
       objectReference: {fileID: 0}
     - target: {fileID: 1808152106810471093, guid: 1e2caec477e1efa4ba16ee65a0fa358e, type: 3}
       propertyPath: m_TargetGraphic
