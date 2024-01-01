@@ -76,7 +76,7 @@ public class ScoreSystem : MonoBehaviour
         scoreItems[0].messageText.text = "Case Wound Type: " + woundTypes.ToUpper();
         string woundString = CaseManager.instance.GetWoundCount().ToString() + "/" + CaseManager.instance.totalWounds.ToString();
         scoreItems[1].messageText.text = "Wounds Inspected\n  " + woundString;
-        scoreItems[2].messageText.text = "Inspection Proper";
+        scoreItems[2].messageText.text = "Proper Inspection";
         scoreItems[3].messageText.text = "Submitted On Time";
         submitted = true;
 
