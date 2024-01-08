@@ -36873,6 +36873,14 @@ PrefabInstance:
       propertyPath: totalWounds
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 3588623059608438440, guid: 36d0f0b92c0531645af89c1b3fb8f6ae, type: 3}
+      propertyPath: caseWoundType
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588623059608438440, guid: 36d0f0b92c0531645af89c1b3fb8f6ae, type: 3}
+      propertyPath: 'caseItems.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8d3dfb2cc19ca0b4ca71c930457f85bb, type: 2}
     - target: {fileID: 3995319369650174955, guid: 36d0f0b92c0531645af89c1b3fb8f6ae, type: 3}
       propertyPath: m_Name
       value: Ingame Managers
